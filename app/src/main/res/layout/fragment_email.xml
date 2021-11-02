@@ -8,7 +8,58 @@
         android:layout_height="match_parent"
         tools:context=".ui.login.EmailFragment">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_email"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/email_address_qstn_txt"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_email" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="70dp"
+            android:gravity="top"
+            android:hint="@string/email_exmpl"
+            android:minLines="2"
+            android:paddingTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_login" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="50dp"
+            android:text="Continue"
+            app:layout_constraintEnd_toEndOf="@id/email_editText"
+            app:layout_constraintStart_toStartOf="@id/email_editText"
+            app:layout_constraintTop_toBottomOf="@id/email_editText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
