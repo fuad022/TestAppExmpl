@@ -26,7 +26,7 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <TextView
-            android:id="@+id/title_login"
+            android:id="@+id/title_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
@@ -48,7 +48,7 @@
             android:paddingTop="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_login" />
+            app:layout_constraintTop_toBottomOf="@id/title_email" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/login_btn"
