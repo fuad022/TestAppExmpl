@@ -15,8 +15,11 @@ class FaceIdFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-
+        init()
         return binding.root
+    }
+
+    private fun init() {
+        TODO("Not yet implemented")
     }
 }
