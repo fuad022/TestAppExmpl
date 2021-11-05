@@ -7,7 +7,7 @@
     <string name="password">And your password?</string>
     <string name="login">Login</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="title_face_id">Would you like to \nlog in with FaceID?</string>
+    <string name="title_face_id">Would you like to\nlog in with FaceID?</string>
     <string name="face_id_btn_txt">Use Face ID</string>
     <string name="rejection_txt">No thanks</string>
     <string name="email_address_qstn_txt">What\'s your email \naddress?</string>

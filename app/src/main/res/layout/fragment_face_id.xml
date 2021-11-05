@@ -36,12 +36,12 @@
             android:layout_marginHorizontal="35dp"
             android:layout_marginBottom="20dp"
             android:text="@string/face_id_btn_txt"
-            app:layout_constraintBottom_toTopOf="@id/rejection"
+            app:layout_constraintBottom_toTopOf="@id/login_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/rejection"
+            android:id="@+id/login_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"

@@ -60,5 +60,9 @@
         android:id="@+id/rootFragment"
         android:name="com.example.testappexmpl.ui.root.RootFragment"
         android:label="RootFragment"
-        tools:layout="@layout/fragment_root" />
+        tools:layout="@layout/fragment_root">
+        <argument
+            android:name="profileImg"
+            app:argType="integer" />
+    </fragment>
 </navigation>

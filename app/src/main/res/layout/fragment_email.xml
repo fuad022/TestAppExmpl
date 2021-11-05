@@ -6,6 +6,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:context=".ui.login.EmailFragment">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -36,30 +38,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_bar_email" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_editText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_inputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="70dp"
-            android:gravity="top"
-            android:hint="@string/email_exmpl"
-            android:minLines="2"
-            android:paddingTop="0dp"
+            app:boxBackgroundMode="filled"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_email" />
+            app:layout_constraintTop_toBottomOf="@id/title_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_editText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="top"
+                android:hint="@string/email_exmpl"
+                android:minLines="2"
+                android:paddingStart="0dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_btn"
+            android:id="@+id/continue_to_pass_btn"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="50dp"
             android:text="Continue"
-            app:layout_constraintEnd_toEndOf="@id/email_editText"
-            app:layout_constraintStart_toStartOf="@id/email_editText"
-            app:layout_constraintTop_toBottomOf="@id/email_editText" />
+            app:layout_constraintEnd_toEndOf="@id/email_inputLayout"
+            app:layout_constraintStart_toStartOf="@id/email_inputLayout"
+            app:layout_constraintTop_toBottomOf="@id/email_inputLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

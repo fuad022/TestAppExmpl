@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentFaceIdBinding
 
@@ -20,6 +21,15 @@ class FaceIdFragment : Fragment() {
     }
 
     private fun init() {
-        TODO("Not yet implemented")
+        binding.faceIdBtn.setOnClickListener {
+            val action =
+                FaceIdFragmentDirections.actionFaceIdFragmentToRootFragment(R.drawable.profile_img_1)
+            findNavController().navigate(action)
+        }
+
+        binding.loginBtn.setOnClickListener {
+            val action = FaceIdFragmentDirections.actionFaceIdFragmentToLoginFragment()
+            findNavController().navigate(action)
+        }
     }
 }

@@ -39,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@id/app_bar_login" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_qstn_inputLayout"
+            android:id="@+id/email_inputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             app:layout_constraintTop_toBottomOf="@id/title_login">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email_qstn_editText"
+                android:id="@+id/email_editText"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:gravity="top"
@@ -63,7 +63,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pass_qstn_inputLayout"
+            android:id="@+id/pass_inputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,10 +72,10 @@
             app:boxBackgroundMode="filled"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email_qstn_inputLayout">
+            app:layout_constraintTop_toBottomOf="@id/email_inputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pass_qstn_editText"
+                android:id="@+id/pass_editText"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:gravity="top"
@@ -93,9 +93,9 @@
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="50dp"
             android:text="@string/login"
-            app:layout_constraintEnd_toEndOf="@id/pass_qstn_inputLayout"
-            app:layout_constraintStart_toStartOf="@id/pass_qstn_inputLayout"
-            app:layout_constraintTop_toBottomOf="@id/pass_qstn_inputLayout" />
+            app:layout_constraintEnd_toEndOf="@id/pass_inputLayout"
+            app:layout_constraintStart_toStartOf="@id/pass_inputLayout"
+            app:layout_constraintTop_toBottomOf="@id/pass_inputLayout" />
 
         <TextView
             android:id="@+id/forgot_password"
