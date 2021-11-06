@@ -16,4 +16,5 @@
     <string name="title_map">Map</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
+    <string name="home_search">Try \"Running in London\"</string>
 </resources>
