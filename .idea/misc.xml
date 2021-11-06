@@ -6,6 +6,7 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/bottom_nav_color.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/home_selector.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_arrow_back.xml" value="0.21354166666666666" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_camera.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_profile.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/map_selector.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/notifications_selector.xml" value="0.20833333333333334" />
@@ -14,7 +15,7 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/content_main.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_email.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_face_id.xml" value="0.33" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_map.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_notifications.xml" value="0.1921875" />
@@ -22,6 +23,8 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_profile.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_root.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_data_horizontal_item.xml" value="0.75" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/main_rv_vertical_item.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_grid_rv_item.xml" value="0.384375" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
       </map>
     </option>

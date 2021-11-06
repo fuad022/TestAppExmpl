@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_page_rv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+<!--        <com.google.android.material.imageview.ShapeableImageView-->
+<!--            android:id="@+id/post_page_img_vertical"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/username_horizontal"-->
+<!--            app:layout_constraintStart_toStartOf="@id/username_horizontal"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:shapeAppearanceOverlay="@style/Rectangle"-->
+<!--            tools:src="@drawable/vertical_img_1" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
