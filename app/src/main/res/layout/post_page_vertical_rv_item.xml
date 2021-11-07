@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_page_vertical_rv_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/review_profile_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circle"
+            tools:src="@drawable/user_img_6" />
+
+        <TextView
+            android:id="@+id/reviews_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/review_profile_img"
+            app:layout_constraintTop_toTopOf="review_profile_img"
+            tools:text="Natasha Toros" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/review_rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:progressTint="@color/black"
+            android:rating="3.5"
+            android:stepSize="0.5"
+            app:layout_constraintBottom_toBottomOf="@id/review_profile_img"
+            app:layout_constraintStart_toStartOf="@id/reviews_fullname"
+            app:layout_constraintTop_toBottomOf="@id/reviews_fullname" />
+
+        <TextView
+            android:id="@+id/rating_bar_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/review_rating_bar"
+            app:layout_constraintStart_toEndOf="@id/review_rating_bar"
+            app:layout_constraintTop_toTopOf="@id/review_rating_bar"
+            tools:text="0/5" />
+
+        <TextView
+            android:id="@+id/added_review_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="4dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/review_rating_bar"
+            app:layout_constraintTop_toBottomOf="@id/review_rating_bar"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="@string/text_1" />
+
+        <ImageView
+            android:id="@+id/review_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_review_block"
+            app:layout_constraintStart_toStartOf="@id/added_review_text"
+            app:layout_constraintTop_toBottomOf="@id/added_review_text" />
+
+        <TextView
+            android:id="@+id/review_block_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="5"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/review_block"
+            app:layout_constraintStart_toEndOf="@id/review_block"
+            app:layout_constraintTop_toTopOf="@id/review_block" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
