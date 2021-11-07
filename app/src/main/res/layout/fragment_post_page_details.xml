@@ -4,11 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/post_page_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.postpagedetails.PostPageDetailsFragment">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_post_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
 
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_post_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="bottom"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:scrimAnimationDuration="300">
+
+                <ImageView
+                    android:id="@+id/collapsing_imageview_post_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    tools:src="@drawable/vertical_img_1" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/post_page_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_back_arrow_rounded" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/post_page_details_pretitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Beach run club" />
+
+                <TextView
+                    android:id="@+id/post_page_details_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="@id/post_page_details_pretitle"
+                    app:layout_constraintTop_toBottomOf="@id/post_page_details_pretitle"
+                    tools:text="Run along with waves" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/rating_bar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:progressTint="@color/black"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toStartOf="@id/post_page_details_title"
+                    app:layout_constraintTop_toBottomOf="@id/post_page_details_title" />
+
+                <TextView
+                    android:id="@+id/rating_bar_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+                    app:layout_constraintStart_toEndOf="@id/rating_bar"
+                    app:layout_constraintTop_toTopOf="@id/rating_bar"
+                    tools:text="0.0/5.0" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="1.3 km nearby"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/rating_bar_mark"
+                    app:layout_constraintStart_toEndOf="@id/rating_bar_mark"
+                    app:layout_constraintTop_toTopOf="@id/rating_bar_mark" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/post_page_rv_img_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/rating_bar"
+                    app:layout_constraintTop_toBottomOf="@id/rating_bar"
+                    tools:itemCount="5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginEnd="15dp"-->
+        <!--            android:layout_marginBottom="50dp"-->
+        <!--            android:text="Continue"-->
+        <!--            app:layout_anchor="@id/constraint_layout"-->
+        <!--            app:layout_anchorGravity="bottom|end"/>-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

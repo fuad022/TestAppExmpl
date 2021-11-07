@@ -6,6 +6,7 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/bottom_nav_color.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/home_selector.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_arrow_back.xml" value="0.21354166666666666" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_back_arrow_rounded.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_camera.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_profile.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/map_selector.xml" value="0.20833333333333334" />
@@ -20,7 +21,7 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_map.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_notifications.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_password.xml" value="0.1921875" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_post_page_details.xml" value="0.1921875" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_post_page_details.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_profile.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_root.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_data_horizontal_item.xml" value="0.75" />
