@@ -4,22 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/post_page_rv_item"
+        android:id="@+id/post_page_grid_rv_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:id="@+id/post_page_img_vertical"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="150dp"-->
-<!--            android:layout_margin="10dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            app:layout_constraintEnd_toEndOf="@id/username_horizontal"-->
-<!--            app:layout_constraintStart_toStartOf="@id/username_horizontal"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:shapeAppearanceOverlay="@style/Rectangle"-->
-<!--            tools:src="@drawable/vertical_img_1" />-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/post_page_grid_rv_item_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Rectangle"
+            tools:src="@drawable/vertical_img_1" />
 
+        <TextView
+            android:id="@+id/post_page_grid_rv_item_pretitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/post_page_grid_rv_item_img"
+            app:layout_constraintTop_toBottomOf="@id/post_page_grid_rv_item_img"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="Beach run club" />
+
+        <TextView
+            android:id="@+id/post_page_grid_rv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/post_page_grid_rv_item_img"
+            app:layout_constraintTop_toBottomOf="@id/post_page_grid_rv_item_pretitle"
+            app:layout_constraintWidth_percent="0.7"
+            tools:text="Run along with waves" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
