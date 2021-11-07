@@ -28,7 +28,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@id/review_profile_img"
-            app:layout_constraintTop_toTopOf="review_profile_img"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Natasha Toros" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
@@ -86,6 +86,27 @@
             app:layout_constraintBottom_toBottomOf="@id/review_block"
             app:layout_constraintStart_toEndOf="@id/review_block"
             app:layout_constraintTop_toTopOf="@id/review_block" />
+
+        <TextView
+            android:id="@+id/review_days_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="days ago"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/review_block"
+            app:layout_constraintEnd_toEndOf="@id/added_review_text"
+            app:layout_constraintTop_toTopOf="@id/review_block" />
+
+        <TextView
+            android:id="@+id/review_days"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/review_days_text"
+            app:layout_constraintEnd_toStartOf="@id/review_days_text"
+            app:layout_constraintTop_toTopOf="@id/review_days_text"
+            tools:text="2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -51,7 +51,7 @@
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/post_page_constraint_layout"
+                android:id="@+id/nested_scroll_constraint_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -257,8 +257,8 @@
                     android:id="@+id/search"
                     android:layout_width="0dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/text_input_shape"
                     android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/text_input_shape"
                     android:drawablePadding="10dp"
                     android:elevation="10dp"
                     android:hint="Add a review"
@@ -269,8 +269,8 @@
                     android:paddingStart="15dp"
                     android:paddingEnd="10dp"
                     app:endIconMode="clear_text"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="@id/profile_img"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/profile_img"
                     app:layout_constraintTop_toTopOf="@id/profile_img" />
 
@@ -279,23 +279,46 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/search"
+                    tools:itemCount="3"
                     tools:listitem="@layout/post_page_vertical_rv_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
-        <!--        <com.google.android.material.button.MaterialButton-->
-        <!--            android:id="@+id/btn"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginEnd="15dp"-->
-        <!--            android:layout_marginBottom="50dp"-->
-        <!--            android:text="Continue"-->
-        <!--            app:layout_anchor="@id/constraint_layout"-->
-        <!--            app:layout_anchorGravity="bottom|end"/>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@color/white"
+            app:layout_anchor="@id/nested_scroll_constraint_layout"
+            app:layout_anchorGravity="bottom">
+
+            <TextView
+                android:id="@+id/footer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:text="£8.00 per person"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/footer_btn"
+                android:layout_width="163dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="35dp"
+                android:text="RSVP to class"
+                app:layout_constraintBottom_toBottomOf="@id/footer_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/footer_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
