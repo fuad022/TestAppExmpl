@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true"
@@ -34,29 +35,29 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_recycler_view_horizontal"
+            android:id="@+id/home_horizontal_rv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/users_recycler_view_vertical"
+            app:layout_constraintBottom_toTopOf="@id/home_vertical_rv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search"
-            tools:listitem="@layout/home_data_horizontal_item" />
+            tools:listitem="@layout/home_horizontal_rv_item" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/users_recycler_view_vertical"
+            android:id="@+id/home_vertical_rv"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_recycler_view_horizontal"
-            tools:listitem="@layout/main_rv_vertical_item" />
+            app:layout_constraintTop_toBottomOf="@id/home_horizontal_rv"
+            tools:listitem="@layout/home_vertical_rv_item" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/face_id_btn"
