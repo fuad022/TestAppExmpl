@@ -68,13 +68,15 @@
             tools:text="@string/text_1" />
 
         <ImageView
-            android:id="@+id/review_block"
+            android:id="@+id/review_block_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/ic_review_block"
             app:layout_constraintStart_toStartOf="@id/added_review_text"
-            app:layout_constraintTop_toBottomOf="@id/added_review_text" />
+            app:layout_constraintTop_toBottomOf="@id/added_review_text"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/review_block_count"
@@ -83,9 +85,9 @@
             android:layout_marginStart="8dp"
             android:text="5"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_block"
-            app:layout_constraintStart_toEndOf="@id/review_block"
-            app:layout_constraintTop_toTopOf="@id/review_block" />
+            app:layout_constraintBottom_toBottomOf="@id/review_block_icon"
+            app:layout_constraintStart_toEndOf="@id/review_block_icon"
+            app:layout_constraintTop_toTopOf="@id/review_block_icon" />
 
         <TextView
             android:id="@+id/review_days_text"
@@ -93,9 +95,9 @@
             android:layout_height="wrap_content"
             android:text="days ago"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_block"
+            app:layout_constraintBottom_toBottomOf="@id/review_block_icon"
             app:layout_constraintEnd_toEndOf="@id/added_review_text"
-            app:layout_constraintTop_toTopOf="@id/review_block" />
+            app:layout_constraintTop_toTopOf="@id/review_block_icon" />
 
         <TextView
             android:id="@+id/review_days"

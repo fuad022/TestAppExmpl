@@ -289,6 +289,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/footer_constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="@color/white"

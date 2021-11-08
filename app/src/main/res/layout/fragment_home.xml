@@ -57,6 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_horizontal_rv"
+            tools:itemCount="2"
             tools:listitem="@layout/home_vertical_rv_item" />
 
         <com.google.android.material.button.MaterialButton
