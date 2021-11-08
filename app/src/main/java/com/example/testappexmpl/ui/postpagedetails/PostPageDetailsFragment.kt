@@ -20,4 +20,6 @@ class PostPageDetailsFragment : Fragment() {
 
         return binding.root
     }
+
+
 }

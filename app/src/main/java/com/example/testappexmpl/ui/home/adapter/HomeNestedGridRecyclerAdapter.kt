@@ -11,12 +11,16 @@ import com.example.testappexmpl.databinding.HomeNestedGridRvItemBinding
 
 class HomeNestedGridRecyclerAdapter : ListAdapter<HomeNestedGridRecyclerItemModel, HomeNestedGridRecyclerAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: HomeNestedGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: HomeNestedGridRecyclerItemModel) {
-            binding.homeNestedGridRvItemImg.setImageResource(model.image)
-            binding.homeNestedGridRvItemPretitle.text = model.pretitle
-            binding.homeNestedGridRvItemTitle.text = model.title
-
+    inner class ItemHolder(private val binding: HomeNestedGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(model: HomeNestedGridRecyclerItemModel?) {
+            model?.let { model ->
+                binding.homeNestedGridRvItemImg.setImageResource(model.image!!)
+                binding.homeNestedGridRvItemPretitle.text = model.pretitle
+                binding.homeNestedGridRvItemTitle.text = model.title
+                binding.root.setOnClickListener {
+                    model.let { user -> setOnItemClick?.invoke(user) }
+                }
+            }
         }
     }
 
@@ -48,5 +52,15 @@ class HomeNestedGridRecyclerAdapter : ListAdapter<HomeNestedGridRecyclerItemMode
 
     override fun submitList(list: List<HomeNestedGridRecyclerItemModel>?) {
         super.submitList(list?.map { it.copy() })
+    }
+
+    private var setOnItemClick: ((HomeNestedGridRecyclerItemModel) -> Unit)? = null
+
+    fun setOnClickListener(listener: (HomeNestedGridRecyclerItemModel) -> Unit) {
+        setOnItemClick = listener
+    }
+
+    override fun getItemCount(): Int {
+        return 4
     }
 }
