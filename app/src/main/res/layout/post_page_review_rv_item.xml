@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/post_page_vertical_rv_review"
+        android:id="@+id/post_page_review_rv_review"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

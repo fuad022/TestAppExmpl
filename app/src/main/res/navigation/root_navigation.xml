@@ -40,5 +40,8 @@
         <argument
             android:name="profileImg"
             app:argType="integer" />
+        <argument
+            android:name="homeNestedGridRecyclerItemModel"
+            app:argType="com.example.testappexmpl.data.model.HomeNestedGridRecyclerItemModel" />
     </fragment>
 </navigation>

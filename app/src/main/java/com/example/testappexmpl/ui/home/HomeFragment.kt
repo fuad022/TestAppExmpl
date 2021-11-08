@@ -9,14 +9,16 @@ import androidx.fragment.app.viewModels
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentHomeBinding
 import com.example.testappexmpl.ui.home.adapter.HomeHorizontalRecyclerAdapter
+import com.example.testappexmpl.ui.home.adapter.HomeVerticalRecyclerAdapter
 import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
 import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
-    private val viewModel: HomeHorizontalRecyclerDataViewModel by viewModels()
+    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModels()
+    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModels()
     private val homeHorizontalRecyclerAdapter = HomeHorizontalRecyclerAdapter()
-    private val homeVerticalRecyclerAdapter = HomeVerticalRecyclerDataViewModel()
+    private val homeVerticalRecyclerAdapter = HomeVerticalRecyclerAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,14 +26,19 @@ class HomeFragment : Fragment() {
     ): View {
 
         setupHorizontalRV()
+        setupVerticalRV()
         return binding.root
     }
 
     private fun setupHorizontalRV() {
-        viewModel.mockDataList.observe(viewLifecycleOwner, {
+        horizontalViewModel.mockDataList.observe(viewLifecycleOwner, {
             homeHorizontalRecyclerAdapter.submitList(it.toMutableList())
             binding.homeHorizontalRv.adapter = homeHorizontalRecyclerAdapter
         })
+    }
+
+    private fun setupVerticalRV() {
+        TODO("Not yet implemented")
     }
 
 }

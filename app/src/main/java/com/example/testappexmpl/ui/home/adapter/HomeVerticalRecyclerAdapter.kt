@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
 import com.example.testappexmpl.data.model.HomeVerticalRecyclerItemModel
 import com.example.testappexmpl.databinding.HomeVerticalRvItemBinding
 
@@ -16,7 +15,9 @@ class HomeVerticalRecyclerAdapter : ListAdapter<HomeVerticalRecyclerItemModel, H
             binding.homeMainRvVerticalTitle.text = model.title
             binding.homeMainRvVerticalBtn.text = model.titleBtn
 
-
+            val homeNestedGridRecyclerAdapter = HomeNestedGridRecyclerAdapter()
+            binding.homeNestedGridRv.adapter = homeNestedGridRecyclerAdapter
+            homeNestedGridRecyclerAdapter.submitList(model.list)
         }
     }
 
