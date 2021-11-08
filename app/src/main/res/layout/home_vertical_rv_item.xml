@@ -40,10 +40,10 @@
             android:layout_marginHorizontal="22dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="@string/face_id_btn_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_nested_grid_rv" />
+            app:layout_constraintTop_toBottomOf="@id/home_nested_grid_rv"
+            tools:text="See all Fitness and run clubs" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

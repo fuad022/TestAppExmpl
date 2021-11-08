@@ -8,6 +8,7 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_arrow_back.xml" value="0.21354166666666666" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_back_arrow_rounded.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_camera.xml" value="0.20833333333333334" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_clear.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/ic_profile.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/map_selector.xml" value="0.20833333333333334" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/drawable/notifications_selector.xml" value="0.20833333333333334" />
@@ -21,13 +22,13 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_map.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_notifications.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_password.xml" value="0.1921875" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_post_page_details.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_post_page_details.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_profile.xml" value="0.1921875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_root.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_data_horizontal_item.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_horizontal_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_nested_grid_rv_item.xml" value="0.33" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_vertical_rv_item.xml" value="0.1921875" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_vertical_rv_item.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/main_rv_vertical_item.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_grid_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_members_img_item.xml" value="0.75" />

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
 import com.example.testappexmpl.databinding.HomeHorizontalRvItemBinding
 
-class HorizontalRecyclerAdapter : ListAdapter<HomeHorizontalRecyclerItemModel, HorizontalRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class HomeHorizontalRecyclerAdapter : ListAdapter<HomeHorizontalRecyclerItemModel, HomeHorizontalRecyclerAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: HomeHorizontalRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: HomeHorizontalRecyclerItemModel) {
