@@ -15,20 +15,8 @@ object MockData {
 
     fun getHomeVerticalList(): List<HomeVerticalRecyclerItemModel> {
         val list: ArrayList<HomeVerticalRecyclerItemModel> = arrayListOf()
-        list.add(
-            HomeVerticalRecyclerItemModel(
-                "Fitness and run clubs",
-                getHomeGridList1(),
-                "See all Fitness and run clubs"
-            )
-        )
-        list.add(
-            HomeVerticalRecyclerItemModel(
-                "Healthy eating",
-                getHomeGridList2(),
-                "See all healthy eating "
-            )
-        )
+        list.add(HomeVerticalRecyclerItemModel("Fitness and run clubs", getHomeGridList1(), "See all Fitness and run clubs"))
+        list.add(HomeVerticalRecyclerItemModel("Healthy eating", getHomeGridList2(), "See all healthy eating "))
         return list
     }
 
@@ -55,7 +43,6 @@ object MockData {
 
     private fun getHomeGridList1(): List<PostPageModel> {
         val list: ArrayList<PostPageModel> = arrayListOf()
-
         list.add(
             PostPageModel(
                 R.drawable.vertical_img_1,
@@ -167,20 +154,8 @@ object MockData {
             "Loved the class! Such beautiful",
             "land and collective impact"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Natascha Toros",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Emilia Campfire",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Natascha Toros", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Emilia Campfire", reviewCommentList[1]))
         return list
     }
 
@@ -190,20 +165,8 @@ object MockData {
             "infrastructure social",
             "entrepreneurship mass incarceration"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Stefan Daily",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Noelle Cummings",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Stefan Daily", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Noelle Cummings", reviewCommentList[1]))
         return list
     }
 
@@ -213,20 +176,8 @@ object MockData {
             "Never run so well and",
             "it’s all thanks to Jordan."
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Madeline Ball",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Ida Shortle",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Madeline Ball", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Ida Shortle", reviewCommentList[1]))
         return list
     }
 
@@ -236,13 +187,7 @@ object MockData {
             "Silo framework overcome",
             "justice ideate"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Bruno Stanley",
-                reviewCommentList[0]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Bruno Stanley", reviewCommentList[0]))
         list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Bob Rose", reviewCommentList[1]))
         return list
     }
@@ -253,13 +198,7 @@ object MockData {
             "citizen-centered effective",
             "Big up my running crew"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Harlan Flowers",
-                reviewCommentList[0]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Harlan Flowers", reviewCommentList[0]))
         list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Sybil Poe", reviewCommentList[1]))
         return list
     }
@@ -270,20 +209,8 @@ object MockData {
             "they better not say",
             "running crew who!"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Troy Badman",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Wade Hubbard",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Troy Badman", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Wade Hubbard", reviewCommentList[1]))
         return list
     }
 
@@ -293,20 +220,8 @@ object MockData {
             "Commitment equal",
             "opportunity empower."
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Nina Carline",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Margot Holland",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Nina Carline", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Margot Holland", reviewCommentList[1]))
         return list
     }
 
@@ -316,24 +231,10 @@ object MockData {
             "First name means: Christmas child.",
             "Feel free to use any of the names"
         )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_1,
-                "Salena Andrews",
-                reviewCommentList[0]
-            )
-        )
-        list.add(
-            PostPageReviewItemModel(
-                R.drawable.user_img_2,
-                "Pandora Elliott",
-                reviewCommentList[1]
-            )
-        )
+        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Salena Andrews", reviewCommentList[0]))
+        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Pandora Elliott", reviewCommentList[1]))
         return list
     }
-
-
 }
 
 
