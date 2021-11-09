@@ -9,7 +9,7 @@ class PostPageReviewRecyclerViewModel : ViewModel() {
     private val _dataList = MutableLiveData<List<PostPageReviewItemModel>>()
     val reviewRecyclerDataList: LiveData<List<PostPageReviewItemModel>> get() = _dataList
 
-    fun sendMessageData(list: List<PostPageReviewItemModel>) {
+    fun sendReviewData(list: List<PostPageReviewItemModel>) {
         _dataList.value = list
     }
 }

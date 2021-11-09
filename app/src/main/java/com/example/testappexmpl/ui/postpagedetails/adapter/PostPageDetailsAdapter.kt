@@ -17,18 +17,6 @@ class PostPageDetailsAdapter : ListAdapter<PostPageModel, PostPageDetailsAdapter
             binding.postPageTitle.text = model.title
             binding.otherMembersCount.text = model.otherMembersCount.toString()
             binding.otherGridImageCount.text = model.otherPostPageGridImageCount.toString()
-
-            val postPageHorizontalRecyclerAdapter = PostPageHorizontalRecyclerAdapter()
-            binding.postPageHorizontalRv.adapter = postPageHorizontalRecyclerAdapter
-            postPageHorizontalRecyclerAdapter.submitList(model.membersImageList?.toMutableList())
-
-            val postPageGridRecyclerAdapter = PostPageGridRecyclerAdapter()
-            binding.postPageGridRv.adapter = postPageGridRecyclerAdapter
-            postPageGridRecyclerAdapter.submitList(model.postPageGridImageList?.toMutableList())
-
-            val postPageReviewRecyclerAdapter = PostPageReviewRecyclerAdapter()
-            binding.postPageReviewVerticalRv.adapter = postPageReviewRecyclerAdapter
-            postPageReviewRecyclerAdapter.submitList(model.reviewList?.toMutableList())
         }
     }
 

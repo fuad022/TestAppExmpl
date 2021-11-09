@@ -47,5 +47,4 @@ class PostPageReviewRecyclerAdapter : ListAdapter<PostPageReviewItemModel, PostP
     override fun submitList(list: List<PostPageReviewItemModel>?) {
         super.submitList(list?.map { it.copy() })
     }
-
 }

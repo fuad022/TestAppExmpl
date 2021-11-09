@@ -9,7 +9,7 @@ class PostPageHorizontalRecyclerViewModel : ViewModel() {
     private val _dataList = MutableLiveData<List<PostPageHorizontalRecyclerItemModel>>()
     val horizontalRecyclerDataList: LiveData<List<PostPageHorizontalRecyclerItemModel>> get() = _dataList
 
-    fun sendMessageData(list: List<PostPageHorizontalRecyclerItemModel>) {
+    fun sendHorizontalData(list: List<PostPageHorizontalRecyclerItemModel>) {
         _dataList.value = list
     }
 }

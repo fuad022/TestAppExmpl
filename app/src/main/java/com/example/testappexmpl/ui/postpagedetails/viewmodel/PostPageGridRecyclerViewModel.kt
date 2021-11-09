@@ -9,7 +9,7 @@ class PostPageGridRecyclerViewModel : ViewModel() {
     private val _dataList = MutableLiveData<List<PostPageGridRecyclerItemModel>>()
     val gridRecyclerDataList: LiveData<List<PostPageGridRecyclerItemModel>> get() = _dataList
 
-    fun sendMessageData(list: List<PostPageGridRecyclerItemModel>) {
+    fun sendGridData(list: List<PostPageGridRecyclerItemModel>) {
         _dataList.value = list
     }
 }
