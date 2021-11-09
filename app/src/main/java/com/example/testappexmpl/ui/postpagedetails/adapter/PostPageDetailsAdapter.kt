@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.PostPageModel
+import com.example.testappexmpl.data.model.PostPageLightModel
 import com.example.testappexmpl.databinding.FragmentPostPageDetailsBinding
 
-class PostPageDetailsAdapter : ListAdapter<PostPageModel, PostPageDetailsAdapter.ItemHolder>(DiffCallback()) {
+class PostPageDetailsAdapter : ListAdapter<PostPageLightModel, PostPageDetailsAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: FragmentPostPageDetailsBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: PostPageModel) {
+        fun bind(model: PostPageLightModel) {
             binding.postPageCollapsingImageview.setImageResource(model.image!!)
             binding.postPagePretitle.text = model.pretitle
             binding.postPageTitle.text = model.title
@@ -34,19 +34,19 @@ class PostPageDetailsAdapter : ListAdapter<PostPageModel, PostPageDetailsAdapter
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<PostPageModel>() {
+    private class DiffCallback : DiffUtil.ItemCallback<PostPageLightModel>() {
         override fun areItemsTheSame(
-            oldItem: PostPageModel,
-            newItem: PostPageModel
+            oldItem: PostPageLightModel,
+            newItem: PostPageLightModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: PostPageModel,
-            newItem: PostPageModel
+            oldItem: PostPageLightModel,
+            newItem: PostPageLightModel
         ) = oldItem == newItem
     }
 
-    override fun submitList(list: List<PostPageModel>?) {
+    override fun submitList(list: List<PostPageLightModel>?) {
         super.submitList(list?.map { it.copy() })
     }
 }

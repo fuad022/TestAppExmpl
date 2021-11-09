@@ -23,13 +23,15 @@ import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageReviewRecyc
 class PostPageDetailsFragment : Fragment() {
     private val binding by lazy { FragmentPostPageDetailsBinding.inflate(layoutInflater) }
     private val args: PostPageDetailsFragmentArgs by navArgs()
-    private val postPageDetailsViewModel: PostPageLightViewModel by viewModels()
+    private val postPageLightViewModel: PostPageLightViewModel by viewModels()
     private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModels()
     private val gridViewModel: PostPageGridRecyclerViewModel by viewModels()
     private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModels()
-    private val gridRecyclerAdapter = PostPageGridRecyclerAdapter()
     private val horizontalRecyclerAdapter = PostPageHorizontalRecyclerAdapter()
+    private val gridRecyclerAdapter = PostPageGridRecyclerAdapter()
     private val reviewRecyclerAdapter = PostPageReviewRecyclerAdapter()
+    //    private val postPageDetailsAdapter = PostPageDetailsAdapter()
+    //    private var postPageModelList = arrayListOf<PostPageLightModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,10 +39,10 @@ class PostPageDetailsFragment : Fragment() {
     ): View {
         initToolbar()
         init()
-//        observeHorizontalList()
-//        observeGridList()
-//        observeReviewList()
-//        observePostPageLight()
+        observeHorizontalList()
+        observeGridList()
+        observeReviewList()
+        observePostPageLight()
         return binding.root
     }
 
@@ -56,7 +58,7 @@ class PostPageDetailsFragment : Fragment() {
     }
 
     private fun init() {
-        postPageDetailsViewModel.sendData(
+        postPageLightViewModel.sendData(
             PostPageLightModel(
                 args.postPageModel.image,
                 args.postPageModel.pretitle,
@@ -70,8 +72,42 @@ class PostPageDetailsFragment : Fragment() {
         reviewViewModel.sendReviewData(args.postPageModel.reviewList!!)
     }
 
+    private fun observeHorizontalList() {
+        horizontalViewModel.horizontalRecyclerDataList.observe(viewLifecycleOwner, {
+            horizontalRecyclerAdapter.submitList(it.toMutableList())
+            binding.postPageHorizontalRv.adapter = horizontalRecyclerAdapter
+        })
+    }
 
+    private fun observeGridList() {
+        gridViewModel.gridRecyclerDataList.observe(viewLifecycleOwner, {
+            gridRecyclerAdapter.submitList(it.toMutableList())
+            binding.postPageGridRv.adapter = gridRecyclerAdapter
+        })
+    }
 
+    private fun observeReviewList() {
+        reviewViewModel.reviewRecyclerDataList.observe(viewLifecycleOwner, {
+            reviewRecyclerAdapter.submitList(it.toMutableList())
+            binding.postPageReviewVerticalRv.adapter = reviewRecyclerAdapter
+        })
+    }
+
+    private fun observePostPageLight() {
+        postPageLightViewModel.postPageLightData.observe(viewLifecycleOwner, {
+
+//            PostPageDetailsAdapter().apply {
+//                postPageModelList.add(it)
+//                submitList(postPageModelList.toMutableList())
+//            }
+
+            binding.postPageCollapsingImageview.setImageResource(it.image!!)
+            binding.postPagePretitle.text = it.pretitle
+            binding.postPageTitle.text = it.title
+            binding.otherMembersCount.text = it.otherMembersCount.toString()
+            binding.otherGridImageCount.text = it.otherPostPageGridImageCount.toString()
+        })
+    }
 }
 
 
