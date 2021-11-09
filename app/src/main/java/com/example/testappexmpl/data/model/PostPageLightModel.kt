@@ -4,8 +4,10 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class HomeVerticalRecyclerItemModel(
+data class PostPageLightModel(
+    val image: Int,
+    val pretitle: String,
     val title: String,
-    val list: List<PostPageModel>,
-    val titleBtn: String
+    val otherMembersCount: Int,
+    val otherPostPageGridImageCount: Int
 ) : Parcelable

@@ -19,7 +19,7 @@ class HomeVerticalRecyclerAdapter : ListAdapter<HomeVerticalRecyclerItemModel, H
 
             val homeNestedGridRecyclerAdapter = HomeNestedGridRecyclerAdapter()
             binding.homeNestedGridRv.adapter = homeNestedGridRecyclerAdapter
-            homeNestedGridRecyclerAdapter.submitList(model.list)
+            homeNestedGridRecyclerAdapter.submitList(model.list.toMutableList())
         }
     }
 

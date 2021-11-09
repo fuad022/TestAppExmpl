@@ -48,10 +48,10 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupGridAdapter() {
-        homeNestedGridRecyclerAdapter.setOnClickListener { itemModel ->
-            itemModel.let {
+        homeNestedGridRecyclerAdapter.setOnClickListener { PostPageModel ->
+            PostPageModel.let {
                 findNavController().navigate(
-                    HomeFragmentDirections.actionHomeFragmentToPostPageDetailsFragment(itemModel)
+                    HomeFragmentDirections.actionHomeFragmentToPostPageDetailsFragment(PostPageModel)
                 )
             }
         }

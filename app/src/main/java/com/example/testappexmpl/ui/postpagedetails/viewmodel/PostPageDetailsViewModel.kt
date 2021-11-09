@@ -3,14 +3,13 @@ package com.example.testappexmpl.ui.postpagedetails.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.testappexmpl.data.model.HomeNestedGridRecyclerItemModel
+import com.example.testappexmpl.data.model.PostPageLightModel
 
 class PostPageDetailsViewModel : ViewModel() {
+    private val _postPageLightData = MutableLiveData<PostPageLightModel>()
+    val postPageLightDataList: LiveData<PostPageLightModel> get() = _postPageLightData
 
-    private val _postPageData = MutableLiveData<HomeNestedGridRecyclerItemModel>()
-    val postPageDataList: LiveData<HomeNestedGridRecyclerItemModel> get() = _postPageData
-
-    fun sendData(itemModel: HomeNestedGridRecyclerItemModel) {
-        _postPageData.value = itemModel
+    fun sendData(itemModel: PostPageLightModel) {
+        _postPageLightData.value = itemModel
     }
 }

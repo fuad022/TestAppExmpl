@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class HomeNestedGridRecyclerItemModel(
+data class PostPageModel(
     val image: Int?,
     val pretitle: String?,
     val title: String?,

@@ -53,11 +53,11 @@ object MockData {
         return list
     }
 
-    private fun getHomeGridList1(): List<HomeNestedGridRecyclerItemModel> {
-        val list: ArrayList<HomeNestedGridRecyclerItemModel> = arrayListOf()
+    private fun getHomeGridList1(): List<PostPageModel> {
+        val list: ArrayList<PostPageModel> = arrayListOf()
 
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_1,
                 "Beach run club",
                 "Run along with waves",
@@ -69,7 +69,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_2,
                 "Boarding",
                 "Skate around your local city",
@@ -81,7 +81,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_3,
                 "Climb",
                 "End of week climb headspace",
@@ -93,7 +93,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_4,
                 "Body",
                 "Train and breathe with Manal",
@@ -107,11 +107,11 @@ object MockData {
         return list
     }
 
-    private fun getHomeGridList2(): List<HomeNestedGridRecyclerItemModel> {
-        val list: ArrayList<HomeNestedGridRecyclerItemModel> = arrayListOf()
+    private fun getHomeGridList2(): List<PostPageModel> {
+        val list: ArrayList<PostPageModel> = arrayListOf()
 
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_5,
                 "Vegan café",
                 "Essential Vegan",
@@ -123,7 +123,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_6,
                 "Food and coffee",
                 "Kahalia Roden café",
@@ -135,7 +135,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_7,
                 "Asian cuisine",
                 "On the Bab",
@@ -147,7 +147,7 @@ object MockData {
             )
         )
         list.add(
-            HomeNestedGridRecyclerItemModel(
+            PostPageModel(
                 R.drawable.vertical_img_8,
                 "Lunch and dinner",
                 "Fresh café",
