@@ -1,10 +1,7 @@
 package com.example.testappexmpl.data.mocklist
 
 import com.example.testappexmpl.R
-import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
-import com.example.testappexmpl.data.model.HomeNestedGridRecyclerItemModel
-import com.example.testappexmpl.data.model.HomeVerticalRecyclerItemModel
-import com.example.testappexmpl.data.model.PostPageReviewItemModel
+import com.example.testappexmpl.data.model.*
 
 object MockData {
 
@@ -35,32 +32,39 @@ object MockData {
         return list
     }
 
+    private fun getMembersImageList(): List<PostPageHorizontalRecyclerItemModel> {
+        val list: ArrayList<PostPageHorizontalRecyclerItemModel> = arrayListOf()
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_1))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_2))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_3))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_4))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_5))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_6))
+        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_7))
+        return list
+    }
+
+    private fun getPostPageGridImageList(): List<PostPageGridRecyclerItemModel> {
+        val list: ArrayList<PostPageGridRecyclerItemModel> = arrayListOf()
+        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_1))
+        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_2))
+        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_3))
+        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_4))
+        return list
+    }
+
     private fun getHomeGridList1(): List<HomeNestedGridRecyclerItemModel> {
         val list: ArrayList<HomeNestedGridRecyclerItemModel> = arrayListOf()
-        val membersImageList = listOf(
-            R.drawable.user_img_1,
-            R.drawable.user_img_2,
-            R.drawable.user_img_3,
-            R.drawable.user_img_4,
-            R.drawable.user_img_5,
-            R.drawable.user_img_6,
-            R.drawable.user_img_7,
-        )
-        val postPageGridImageList = listOf(
-            R.drawable.grid_img_1,
-            R.drawable.grid_img_2,
-            R.drawable.grid_img_3,
-            R.drawable.grid_img_4
-        )
+
         list.add(
             HomeNestedGridRecyclerItemModel(
                 R.drawable.vertical_img_1,
                 "Beach run club",
                 "Run along with waves",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList1()
             )
         )
@@ -69,10 +73,10 @@ object MockData {
                 R.drawable.vertical_img_2,
                 "Boarding",
                 "Skate around your local city",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList2()
             )
         )
@@ -81,10 +85,10 @@ object MockData {
                 R.drawable.vertical_img_3,
                 "Climb",
                 "End of week climb headspace",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList3()
             )
         )
@@ -93,10 +97,10 @@ object MockData {
                 R.drawable.vertical_img_4,
                 "Body",
                 "Train and breathe with Manal",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList4()
             )
         )
@@ -105,30 +109,16 @@ object MockData {
 
     private fun getHomeGridList2(): List<HomeNestedGridRecyclerItemModel> {
         val list: ArrayList<HomeNestedGridRecyclerItemModel> = arrayListOf()
-        val membersImageList = listOf(
-            R.drawable.user_img_1,
-            R.drawable.user_img_2,
-            R.drawable.user_img_3,
-            R.drawable.user_img_4,
-            R.drawable.user_img_5,
-            R.drawable.user_img_6,
-            R.drawable.user_img_7,
-        )
-        val postPageGridImageList = listOf(
-            R.drawable.grid_img_1,
-            R.drawable.grid_img_2,
-            R.drawable.grid_img_3,
-            R.drawable.grid_img_4
-        )
+
         list.add(
             HomeNestedGridRecyclerItemModel(
                 R.drawable.vertical_img_5,
                 "Vegan café",
                 "Essential Vegan",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList5()
             )
         )
@@ -137,10 +127,10 @@ object MockData {
                 R.drawable.vertical_img_6,
                 "Food and coffee",
                 "Kahalia Roden café",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList6()
             )
         )
@@ -149,10 +139,10 @@ object MockData {
                 R.drawable.vertical_img_7,
                 "Asian cuisine",
                 "On the Bab",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList7()
             )
         )
@@ -161,10 +151,10 @@ object MockData {
                 R.drawable.vertical_img_8,
                 "Lunch and dinner",
                 "Fresh café",
-                membersImageList,
-                membersImageList.size - 5,
-                postPageGridImageList,
-                postPageGridImageList.size - 3,
+                getMembersImageList(),
+                getMembersImageList().size - 5,
+                getPostPageGridImageList(),
+                getPostPageGridImageList().size - 3,
                 getReviewList8()
             )
         )

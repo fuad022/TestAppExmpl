@@ -5,18 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
-import com.example.testappexmpl.data.model.HomeNestedGridRecyclerItemModel
-import com.example.testappexmpl.data.model.HomeVerticalRecyclerItemModel
-import com.example.testappexmpl.databinding.HomeHorizontalRvItemBinding
+import com.example.testappexmpl.data.model.PostPageGridRecyclerItemModel
 import com.example.testappexmpl.databinding.PostPageGridRvItemBinding
-import com.example.testappexmpl.ui.home.adapter.HomeHorizontalRecyclerAdapter
 
-class PostPageGridRecyclerAdapter : ListAdapter<Int, PostPageGridRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class PostPageGridRecyclerAdapter : ListAdapter<PostPageGridRecyclerItemModel, PostPageGridRecyclerAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: PostPageGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: Int) {
-
+        fun bind(model: PostPageGridRecyclerItemModel) {
+            binding.imgGrid.setImageResource(model.image)
         }
     }
 
@@ -34,16 +30,23 @@ class PostPageGridRecyclerAdapter : ListAdapter<Int, PostPageGridRecyclerAdapter
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<Int>() {
+    private class DiffCallback : DiffUtil.ItemCallback<PostPageGridRecyclerItemModel>() {
         override fun areItemsTheSame(
-            oldItem: Int,
-            newItem: Int
+            oldItem: PostPageGridRecyclerItemModel,
+            newItem: PostPageGridRecyclerItemModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: Int,
-            newItem: Int
+            oldItem: PostPageGridRecyclerItemModel,
+            newItem: PostPageGridRecyclerItemModel
         ) = oldItem == newItem
     }
 
+    override fun submitList(list: List<PostPageGridRecyclerItemModel>?) {
+        super.submitList(list?.map { it.copy() })
+    }
+
+    override fun getItemCount(): Int {
+        return 3
+    }
 }

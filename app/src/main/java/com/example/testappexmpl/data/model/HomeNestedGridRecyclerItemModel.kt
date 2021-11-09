@@ -8,9 +8,9 @@ data class HomeNestedGridRecyclerItemModel(
     val image: Int?,
     val pretitle: String?,
     val title: String?,
-    val membersImageList: List<Int>?,
+    val membersImageList: List<PostPageHorizontalRecyclerItemModel>?,
     val otherMembersCount: Int?,
-    val postPageGridImageList: List<Int>?,
+    val postPageGridImageList: List<PostPageGridRecyclerItemModel>?,
     val otherPostPageGridImageCount: Int?,
     val reviewList: List<PostPageReviewItemModel>?
 ) : Parcelable
