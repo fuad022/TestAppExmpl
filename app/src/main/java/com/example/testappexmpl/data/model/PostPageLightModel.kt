@@ -5,9 +5,9 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class PostPageLightModel(
-    val image: Int,
-    val pretitle: String,
-    val title: String,
-    val otherMembersCount: Int,
-    val otherPostPageGridImageCount: Int
+    val image: Int?,
+    val pretitle: String?,
+    val title: String?,
+    val otherMembersCount: Int?,
+    val otherPostPageGridImageCount: Int?
 ) : Parcelable

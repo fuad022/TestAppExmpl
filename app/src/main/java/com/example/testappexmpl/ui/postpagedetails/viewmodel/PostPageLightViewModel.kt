@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testappexmpl.data.model.PostPageLightModel
 
-class PostPageDetailsViewModel : ViewModel() {
+class PostPageLightViewModel : ViewModel() {
     private val _postPageLightData = MutableLiveData<PostPageLightModel>()
     val postPageLightDataList: LiveData<PostPageLightModel> get() = _postPageLightData
 
