@@ -8,10 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentNotificationsBinding
 import com.example.testappexmpl.ui.notifications.adapter.ViewPageAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 class NotificationsFragment : Fragment() {
     private val binding by lazy { FragmentNotificationsBinding.inflate(layoutInflater) }
@@ -37,30 +36,22 @@ class NotificationsFragment : Fragment() {
     }
 
     private fun init() {
-        /*
         binding.apply {
-            val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+            val adapter = ViewPageAdapter(activity?.supportFragmentManager!!, lifecycle)
             viewPager.adapter = adapter
 
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 when (position) {
                     0 -> {
-                        tab.text = "Explore"
+                        tab.text = "Following"
                     }
                     1 -> {
-                        tab.text = "Flight"
-                    }
-                    2 -> {
-                        tab.text = "Travel"
+                        tab.text = "You"
                     }
                 }
             }.attach()
         }
-         */
-
-
     }
-
 }
 
 

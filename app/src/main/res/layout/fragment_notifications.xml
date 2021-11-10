@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
+            app:elevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -30,10 +31,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                app:tabIndicatorHeight="3dp"
+                app:tabIndicatorColor="@color/bottom_title"
                 app:tabMode="fixed"
-                app:tabPaddingBottom="8dp"
-                app:tabPaddingTop="15dp" />
+                app:tabTextColor="@color/black" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager2.widget.ViewPager2
