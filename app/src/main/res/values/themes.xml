@@ -25,4 +25,13 @@
     <style name="Circle">
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="Theme.TestAppExmpl.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TestAppExmpl.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TestAppExmpl.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

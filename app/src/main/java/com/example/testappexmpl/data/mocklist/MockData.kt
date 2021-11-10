@@ -235,6 +235,25 @@ object MockData {
         list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Pandora Elliott", reviewCommentList[1]))
         return list
     }
+
+    // Notifications
+    fun getNotifFollowigList(): List<NotificationsRecycleItemModel> {
+        val list: ArrayList<NotificationsRecycleItemModel> = arrayListOf()
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_3, "Olivia Sweyne was at Vegan essential in Shoreditch"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_6, "Miranda Hollister like The Natrual Vegan shop near you"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
+        return list
+    }
+
+    fun getNotifYouList(): List<NotificationsRecycleItemModel> {
+        val list: ArrayList<NotificationsRecycleItemModel> = arrayListOf()
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_8, "Abigal Gates is going to Nike run club with 80 others"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_9, "Natascha toros wants to invite you to go to thier yoga class"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_10, "Olivia Sweyne was at Vegan essential in Shoreditch"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_11, "Miranda Hollister like The Natrual Vegan shop near you"))
+        list.add(NotificationsRecycleItemModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
+        return list
+    }
 }
 
 

@@ -46,13 +46,4 @@ class HomeHorizontalRecyclerAdapter : ListAdapter<HomeHorizontalRecyclerItemMode
     override fun submitList(list: List<HomeHorizontalRecyclerItemModel>?) {
         super.submitList(list?.map { it.copy() })
     }
-
 }
-
-
-
-
-
-
-
-
