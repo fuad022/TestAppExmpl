@@ -33,8 +33,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearanceOverlay="@style/Circle"
-                    tools:src="@drawable/user_img_12" />
+                    android:src="@drawable/user_img_12"
+                    app:shapeAppearanceOverlay="@style/Circle" />
 
                 <TextView
                     android:id="@+id/profile_fullname"

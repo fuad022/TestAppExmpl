@@ -254,6 +254,28 @@ object MockData {
         list.add(NotificationsRecycleItemModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
         return list
     }
+
+    //Profile
+    fun getProfileList(): List<ProfileMainRecyclerItemModel> {
+        val list: ArrayList<ProfileMainRecyclerItemModel> = arrayListOf()
+        list.add(ProfileMainRecyclerItemModel("Going to", getNestedItemList1()))
+        list.add(ProfileMainRecyclerItemModel("Recent experiences", getNestedItemList2()))
+        return list
+    }
+
+    private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
+        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
+        list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
+        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_1, "Between the lines", "Scale and impact shared unit.", "Running club"))
+        return list
+    }
+
+    private fun getNestedItemList2(): List<ProfileNestedRecyclerItemModel> {
+        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
+        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_2, "Vegan health", "Analysis society global rubric think tank ideate.", "Vegan"))
+        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_3, "Swordfish", "Overcome save the world changemaker.", "Swimming club"))
+        return list
+    }
 }
 
 
