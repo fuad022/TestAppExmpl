@@ -15,11 +15,6 @@
             app:destination="@id/postPageDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/mapFragment"
-        android:name="com.example.testappexmpl.ui.map.MapFragment"
-        android:label="fragment_map"
-        tools:layout="@layout/fragment_map" />
-    <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.example.testappexmpl.ui.notifications.NotificationsFragment"
         android:label="fragment_notifications"
@@ -41,4 +36,9 @@
             android:name="postPageModel"
             app:argType="com.example.testappexmpl.data.model.PostPageModel" />
     </fragment>
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.example.testappexmpl.ui.map.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
 </navigation>
