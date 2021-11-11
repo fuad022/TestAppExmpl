@@ -33,8 +33,8 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/fragment_you.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_data_horizontal_item.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_horizontal_rv_item.xml" value="0.5" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_nested_grid_rv_item.xml" value="0.33" />
-        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_vertical_rv_item.xml" value="0.3546875" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_nested_grid_rv_item.xml" value="0.3546875" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/home_vertical_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/main_rv_vertical_item.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/notifications_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_grid_rv_item.xml" value="0.5" />
@@ -42,6 +42,8 @@
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_members_img_item.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_review_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/post_page_vertical_rv_item.xml" value="0.4444444444444444" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/profile_nested_rv_item.xml" value="0.5" />
+        <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/layout/profile_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/TestAppExmpl/app/src/main/res/menu/profile_menu.xml" value="0.3546875" />
       </map>
