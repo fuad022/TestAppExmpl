@@ -17,7 +17,7 @@ class HomeVerticalRecyclerAdapter : ListAdapter<HomeVerticalRecyclerItemModel, H
 
             val homeNestedGridRecyclerAdapter = HomeNestedGridRecyclerAdapter()
             binding.homeNestedGridRv.adapter = homeNestedGridRecyclerAdapter
-            homeNestedGridRecyclerAdapter.submitList(model.list.toMutableList())
+            homeNestedGridRecyclerAdapter.submitList(model.list)
         }
     }
 
@@ -46,9 +46,4 @@ class HomeVerticalRecyclerAdapter : ListAdapter<HomeVerticalRecyclerItemModel, H
             newItem: HomeVerticalRecyclerItemModel
         ) = oldItem == newItem
     }
-
-    override fun submitList(list: List<HomeVerticalRecyclerItemModel>?) {
-        super.submitList(list?.map { it.copy() })
-    }
-
 }

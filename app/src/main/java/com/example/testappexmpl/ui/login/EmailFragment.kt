@@ -25,8 +25,8 @@ class EmailFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        setHasOptionsMenu(true)
-        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarEmail)
+//        setHasOptionsMenu(true)
+//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarEmail)
 
         binding.toolbarEmail.setNavigationOnClickListener {
             activity?.onBackPressed()

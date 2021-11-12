@@ -30,8 +30,6 @@ class PostPageDetailsFragment : Fragment() {
     private val horizontalRecyclerAdapter = PostPageHorizontalRecyclerAdapter()
     private val gridRecyclerAdapter = PostPageGridRecyclerAdapter()
     private val reviewRecyclerAdapter = PostPageReviewRecyclerAdapter()
-    //    private val postPageDetailsAdapter = PostPageDetailsAdapter()
-    //    private var postPageModelList = arrayListOf<PostPageLightModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,9 +45,6 @@ class PostPageDetailsFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        setHasOptionsMenu(true)
-        (activity as AppCompatActivity).setSupportActionBar(binding.postPageToolbar)
-
         binding.postPageToolbar.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -95,16 +90,10 @@ class PostPageDetailsFragment : Fragment() {
 
     private fun observePostPageLight() {
         postPageLightViewModel.postPageLightData.observe(viewLifecycleOwner, {
-
-//            PostPageDetailsAdapter().apply {
-//                postPageModelList.add(it)
-//                submitList(postPageModelList.toMutableList())
-//            }
-
             binding.postPageCollapsingImageview.setImageResource(it.image!!)
             binding.postPagePretitle.text = it.pretitle
             binding.postPageTitle.text = it.title
-            binding.otherMembersCount.text = it.otherMembersCount.toString()
+            binding.plus.text = "+" + it.otherMembersCount + " people in members"
             binding.otherGridImageCount.text = it.otherPostPageGridImageCount.toString()
         })
     }

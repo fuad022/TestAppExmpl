@@ -15,7 +15,7 @@ class PostPageDetailsAdapter : ListAdapter<PostPageLightModel, PostPageDetailsAd
             binding.postPageCollapsingImageview.setImageResource(model.image!!)
             binding.postPagePretitle.text = model.pretitle
             binding.postPageTitle.text = model.title
-            binding.otherMembersCount.text = model.otherMembersCount.toString()
+//            binding.otherMembersCount.text = model.otherMembersCount.toString()
             binding.otherGridImageCount.text = model.otherPostPageGridImageCount.toString()
         }
     }

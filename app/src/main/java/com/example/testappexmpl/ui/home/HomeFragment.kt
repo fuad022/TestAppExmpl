@@ -22,7 +22,6 @@ class HomeFragment : Fragment() {
     private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModels()
     private val homeHorizontalRecyclerAdapter = HomeHorizontalRecyclerAdapter()
     private val homeVerticalRecyclerAdapter = HomeVerticalRecyclerAdapter()
-    private val homeNestedGridRecyclerAdapter = HomeNestedGridRecyclerAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,35 +29,22 @@ class HomeFragment : Fragment() {
     ): View {
         observeHorizontalList()
         observeVerticalList()
-        setupGridAdapter()
         return binding.root
     }
 
     private fun observeHorizontalList() {
         horizontalViewModel.mockDataList.observe(viewLifecycleOwner, {
-            homeHorizontalRecyclerAdapter.submitList(it.toMutableList())
-            binding.homeHorizontalRv.adapter = homeHorizontalRecyclerAdapter
+            homeHorizontalRecyclerAdapter.submitList(it)
         })
+        binding.homeHorizontalRv.adapter = homeHorizontalRecyclerAdapter
     }
 
     private fun observeVerticalList() {
         verticalViewModel.mockDataList.observe(viewLifecycleOwner, {
-            homeVerticalRecyclerAdapter.submitList(it.toMutableList())
-            binding.homeVerticalRv.adapter = homeVerticalRecyclerAdapter
+            homeVerticalRecyclerAdapter.submitList(it)
         })
+        binding.homeVerticalRv.adapter = homeVerticalRecyclerAdapter
     }
-
-    private fun setupGridAdapter() {
-        homeNestedGridRecyclerAdapter.setOnClickListener { PostPageModel ->
-            Log.d("HomeFragment", "setupGridAdapter_setOnClickListener")
-            PostPageModel.let {
-                findNavController().navigate(
-                    HomeFragmentDirections.actionHomeFragmentToPostPageDetailsFragment(PostPageModel)
-                )
-            }
-        }
-    }
-
 }
 
 

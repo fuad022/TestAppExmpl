@@ -26,8 +26,8 @@ class LoginFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        setHasOptionsMenu(true)
-        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarLogin)
+//        setHasOptionsMenu(true)
+//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarLogin)
 
         binding.toolbarLogin.setNavigationOnClickListener {
             activity?.onBackPressed()

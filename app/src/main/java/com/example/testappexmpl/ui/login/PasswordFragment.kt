@@ -25,8 +25,8 @@ class PasswordFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        setHasOptionsMenu(true)
-        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarPassword)
+//        setHasOptionsMenu(true)
+//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarPassword)
 
         binding.toolbarPassword.setNavigationOnClickListener {
             activity?.onBackPressed()
