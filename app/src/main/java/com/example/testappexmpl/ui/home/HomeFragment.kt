@@ -13,6 +13,7 @@ import com.example.testappexmpl.databinding.FragmentHomeBinding
 import com.example.testappexmpl.ui.home.adapter.HomeHorizontalRecyclerAdapter
 import com.example.testappexmpl.ui.home.adapter.HomeNestedGridRecyclerAdapter
 import com.example.testappexmpl.ui.home.adapter.HomeVerticalRecyclerAdapter
+import com.example.testappexmpl.ui.home.bottomsheet.BottomSheetFilterFragment
 import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
 import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
 
@@ -29,6 +30,7 @@ class HomeFragment : Fragment() {
     ): View {
         observeHorizontalList()
         observeVerticalList()
+        initBtn()
         return binding.root
     }
 
@@ -44,6 +46,12 @@ class HomeFragment : Fragment() {
             homeVerticalRecyclerAdapter.submitList(it)
         })
         binding.homeVerticalRv.adapter = homeVerticalRecyclerAdapter
+    }
+
+    private fun initBtn() {
+        binding.filterBtn.setOnClickListener {
+            BottomSheetFilterFragment().show(activity?.supportFragmentManager!!, "BottomSheetDialog")
+        }
     }
 }
 

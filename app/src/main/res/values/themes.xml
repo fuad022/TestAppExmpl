@@ -34,4 +34,23 @@
     <style name="Theme.TestAppExmpl.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.TestAppExmpl.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+    <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+        <item name="backgroundTint">@color/bottom_title</item>
+    </style>
+
+    <style name="tooltipShOverylay">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="MyTooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:background">@drawable/shape_slider_tooltip</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

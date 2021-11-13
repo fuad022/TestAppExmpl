@@ -90,9 +90,8 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
 
-
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/face_id_btn"
+            android:id="@+id/filter_btn"
             android:layout_width="140dp"
             android:layout_height="55dp"
             android:layout_marginBottom="11dp"
