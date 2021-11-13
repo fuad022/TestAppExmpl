@@ -43,30 +43,59 @@
             android:orientation="horizontal"
             android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/home_vertical_rv"
+            app:layout_constraintBottom_toTopOf="@id/nested_scroll"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/search"
             tools:listitem="@layout/home_horizontal_rv_item" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_vertical_rv"
+        <RelativeLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_horizontal_rv" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:overScrollMode="never"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_horizontal_rv"
-            tools:itemCount="2"
-            tools:listitem="@layout/home_vertical_rv_item" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nested_constrain_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_vertical_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/home_vertical_rv_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/face_id_btn"
             android:layout_width="140dp"
             android:layout_height="55dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="11dp"
             android:text="Filter"
             android:textAlignment="center"
             android:textSize="16sp"
