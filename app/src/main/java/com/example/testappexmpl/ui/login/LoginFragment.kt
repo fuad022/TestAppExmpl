@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentLoginBinding
@@ -26,9 +25,6 @@ class LoginFragment : Fragment() {
     }
 
     private fun initToolbar() {
-//        setHasOptionsMenu(true)
-//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarLogin)
-
         binding.toolbarLogin.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -51,8 +47,8 @@ class LoginFragment : Fragment() {
         binding.apply {
             val email = emailEditText.text.toString()
             val pass = passEditText.text.toString()
-            if (validateInput(email, emailInputLayout) &&
-                validateInput(pass, passInputLayout)
+            if (validateEmail(email, emailInputLayout) &&
+                validatePass(pass, passInputLayout)
             ) {
                 val action =
                     LoginFragmentDirections.actionLoginFragmentToRootFragment(R.drawable.profile_img_1)
@@ -61,10 +57,22 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun validateInput(inputText: String, textInputLayout: TextInputLayout): Boolean {
+    private fun validatePass(inputText: String, textInputLayout: TextInputLayout): Boolean {
         return if (inputText.length <= 7) {
             textInputLayout.isErrorEnabled = true
             textInputLayout.error = "* Minimum 8 Characters Allowed"
+            false
+        } else {
+            textInputLayout.isErrorEnabled = false
+            textInputLayout.error = null
+            true
+        }
+    }
+
+    private fun validateEmail(inputText: String, textInputLayout: TextInputLayout): Boolean {
+        return if (inputText.length <= 4) {
+            textInputLayout.isErrorEnabled = true
+            textInputLayout.error = "* Minimum 5 Characters Allowed"
             false
         } else {
             textInputLayout.isErrorEnabled = false

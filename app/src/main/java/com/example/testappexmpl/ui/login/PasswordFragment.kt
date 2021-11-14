@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.testappexmpl.databinding.FragmentPasswordBinding
 import com.google.android.material.textfield.TextInputLayout
@@ -25,9 +24,6 @@ class PasswordFragment : Fragment() {
     }
 
     private fun initToolbar() {
-//        setHasOptionsMenu(true)
-//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarPassword)
-
         binding.toolbarPassword.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -44,7 +40,7 @@ class PasswordFragment : Fragment() {
     private fun putPass() {
         binding.apply {
             val pass = passwordEditText.text.toString()
-            if (validateInput(pass, passwordInputLayout)
+            if (validatePass(pass, passwordInputLayout)
             ) {
                 val action = PasswordFragmentDirections.actionPasswordFragmentToLoginFragment()
                 findNavController().navigate(action)
@@ -52,7 +48,7 @@ class PasswordFragment : Fragment() {
         }
     }
 
-    private fun validateInput(inputText: String, textInputLayout: TextInputLayout): Boolean {
+    private fun validatePass(inputText: String, textInputLayout: TextInputLayout): Boolean {
         return if (inputText.length <= 7) {
             textInputLayout.isErrorEnabled = true
             textInputLayout.error = "* Minimum 8 Characters Allowed"

@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.testappexmpl.databinding.FragmentEmailBinding
 import com.google.android.material.textfield.TextInputLayout
@@ -25,9 +24,6 @@ class EmailFragment : Fragment() {
     }
 
     private fun initToolbar() {
-//        setHasOptionsMenu(true)
-//        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarEmail)
-
         binding.toolbarEmail.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -44,7 +40,7 @@ class EmailFragment : Fragment() {
     private fun putEmail() {
         binding.apply {
             val email = emailEditText.text.toString()
-            if (validateInput(email, emailInputLayout)
+            if (validateEmail(email, emailInputLayout)
             ) {
                 val action = EmailFragmentDirections.actionEmailFragmentToPasswordFragment()
                 findNavController().navigate(action)
@@ -52,10 +48,10 @@ class EmailFragment : Fragment() {
         }
     }
 
-    private fun validateInput(inputText: String, textInputLayout: TextInputLayout): Boolean {
-        return if (inputText.length <= 7) {
+    private fun validateEmail(inputText: String, textInputLayout: TextInputLayout): Boolean {
+        return if (inputText.length <= 4) {
             textInputLayout.isErrorEnabled = true
-            textInputLayout.error = "* Minimum 8 Characters Allowed"
+            textInputLayout.error = "* Minimum 5 Characters Allowed"
             false
         } else {
             textInputLayout.isErrorEnabled = false
