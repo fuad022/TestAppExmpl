@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="Rectangle">
@@ -35,8 +36,6 @@
 
     <style name="Theme.TestAppExmpl.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
-
     <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
         <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
         <item name="backgroundTint">@color/bottom_title</item>
@@ -52,5 +51,13 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_background</item>
     </style>
 </resources>

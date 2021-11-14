@@ -17,4 +17,6 @@
     <color name="thumb_slide_color">#e1e1e1</color>
     <color name="track_slide_active_color">#FFC726</color>
     <color name="track_slide_inactive_color">#e1e1e1</color>
+
+    <color name="map_radar_color">#f8edca</color>
 </resources>

@@ -92,10 +92,10 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 mMap.addCircle(
                     CircleOptions()
                         .center(currentLatLong)
-                        .strokeColor(R.color.black)
-                        .strokeWidth(10f)
-                        .fillColor(R.color.teal_700)
-                        .radius(30.0)
+                        .strokeColor(R.color.map_radar_color)
+                        .strokeWidth(1f)
+                        .fillColor(R.color.map_radar_color)
+                        .radius(10.0)
                 )
 
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 22f))
