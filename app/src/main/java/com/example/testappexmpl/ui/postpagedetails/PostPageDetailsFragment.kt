@@ -2,13 +2,12 @@ package com.example.testappexmpl.ui.postpagedetails
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.example.testappexmpl.data.model.PostPageLightModel
 import com.example.testappexmpl.databinding.FragmentPostPageDetailsBinding
@@ -24,13 +23,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class PostPageDetailsFragment : Fragment() {
     private val binding by lazy { FragmentPostPageDetailsBinding.inflate(layoutInflater) }
     private val args: PostPageDetailsFragmentArgs by navArgs()
-//    private val postPageLightViewModel: PostPageLightViewModel by viewModels()
     private val postPageLightViewModel: PostPageLightViewModel by viewModel()
-//    private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModels()
     private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModel()
-//    private val gridViewModel: PostPageGridRecyclerViewModel by viewModels()
     private val gridViewModel: PostPageGridRecyclerViewModel by viewModel()
-//    private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModels()
     private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModel()
     private val horizontalRecyclerAdapter = PostPageHorizontalRecyclerAdapter()
     private val gridRecyclerAdapter = PostPageGridRecyclerAdapter()
@@ -46,8 +41,16 @@ class PostPageDetailsFragment : Fragment() {
         observeGridList()
         observeReviewList()
         observePostPageLight()
+//        initRatingBar()
         return binding.root
     }
+
+//    private fun initRatingBar() {
+//        binding.postPageRatingBar.setOnRatingBarChangeListener { ratingBar, fl, b ->
+//            Log.d("Rating", "rating")
+//            binding.ratingBarMark.setText("$fl/5.0")
+//        }
+//    }
 
     private fun initToolbar() {
         binding.postPageToolbar.setNavigationOnClickListener {
