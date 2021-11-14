@@ -10,10 +10,12 @@ import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentFollowingBinding
 import com.example.testappexmpl.ui.notifications.adapter.NotificationsAdapter
 import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsFollowingViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FollowingFragment : Fragment() {
     private val binding by lazy { FragmentFollowingBinding.inflate(layoutInflater) }
-    private val viewModel: NotificationsFollowingViewModel by viewModels()
+//    private val viewModel: NotificationsFollowingViewModel by viewModels()
+    private val viewModel: NotificationsFollowingViewModel by viewModel()
     private val notificationAdapter = NotificationsAdapter()
 
     override fun onCreateView(

@@ -5,12 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testappexmpl.data.mocklist.MockData.getNotifFollowigList
 import com.example.testappexmpl.data.model.NotificationsRecycleItemModel
+import com.example.testappexmpl.repository.DataRepository
 
-class NotificationsFollowingViewModel : ViewModel() {
+class NotificationsFollowingViewModel(private val dataRepository: DataRepository) : ViewModel() {
     private val _mockDataList = MutableLiveData<List<NotificationsRecycleItemModel>>()
     val mockDataList: LiveData<List<NotificationsRecycleItemModel>> get() = _mockDataList
 
     init {
-        _mockDataList.value = getNotifFollowigList()
+        _mockDataList.value = dataRepository.getRepoNotifFollowigList()
     }
 }

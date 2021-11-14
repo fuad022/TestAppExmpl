@@ -5,13 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testappexmpl.data.mocklist.MockData.getHomeVerticalList
 import com.example.testappexmpl.data.model.HomeVerticalRecyclerItemModel
+import com.example.testappexmpl.repository.DataRepository
 
-class HomeVerticalRecyclerDataViewModel : ViewModel() {
+class HomeVerticalRecyclerDataViewModel(private val dataRepository: DataRepository) : ViewModel() {
 
     private val _mockDataList = MutableLiveData<List<HomeVerticalRecyclerItemModel>>()
     val mockDataList: LiveData<List<HomeVerticalRecyclerItemModel>> get() = _mockDataList
 
     init {
-        _mockDataList.value = getHomeVerticalList()
+        _mockDataList.value = dataRepository.getRepoHomeVerticalList()
     }
 }

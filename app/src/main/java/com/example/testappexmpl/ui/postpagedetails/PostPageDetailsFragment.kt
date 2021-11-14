@@ -19,14 +19,19 @@ import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageLightViewMo
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageGridRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageHorizontalRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageReviewRecyclerViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PostPageDetailsFragment : Fragment() {
     private val binding by lazy { FragmentPostPageDetailsBinding.inflate(layoutInflater) }
     private val args: PostPageDetailsFragmentArgs by navArgs()
-    private val postPageLightViewModel: PostPageLightViewModel by viewModels()
-    private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModels()
-    private val gridViewModel: PostPageGridRecyclerViewModel by viewModels()
-    private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModels()
+//    private val postPageLightViewModel: PostPageLightViewModel by viewModels()
+    private val postPageLightViewModel: PostPageLightViewModel by viewModel()
+//    private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModels()
+    private val horizontalViewModel: PostPageHorizontalRecyclerViewModel by viewModel()
+//    private val gridViewModel: PostPageGridRecyclerViewModel by viewModels()
+    private val gridViewModel: PostPageGridRecyclerViewModel by viewModel()
+//    private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModels()
+    private val reviewViewModel: PostPageReviewRecyclerViewModel by viewModel()
     private val horizontalRecyclerAdapter = PostPageHorizontalRecyclerAdapter()
     private val gridRecyclerAdapter = PostPageGridRecyclerAdapter()
     private val reviewRecyclerAdapter = PostPageReviewRecyclerAdapter()

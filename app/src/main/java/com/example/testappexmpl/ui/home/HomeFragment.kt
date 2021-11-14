@@ -16,11 +16,14 @@ import com.example.testappexmpl.ui.home.adapter.HomeVerticalRecyclerAdapter
 import com.example.testappexmpl.ui.home.bottomsheet.BottomSheetFilterFragment
 import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
 import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
-    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModels()
-    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModels()
+//    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModels()
+    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModel()
+//    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModels()
+    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModel()
     private val homeHorizontalRecyclerAdapter = HomeHorizontalRecyclerAdapter()
     private val homeVerticalRecyclerAdapter = HomeVerticalRecyclerAdapter()
 
