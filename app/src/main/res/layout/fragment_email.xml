@@ -28,14 +28,16 @@
                 app:navigationIcon="@drawable/ic_arrow_back" />
         </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
             android:layout_marginTop="30dp"
             android:text="@string/email_address_qstn_txt"
+            android:textColor="@color/black"
             android:textSize="32sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_bar_email" />
 
@@ -61,13 +63,18 @@
                 android:paddingEnd="0dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/continue_to_pass_btn"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="50dp"
+            android:background="@drawable/custom_gradient_button"
+            android:paddingVertical="15dp"
             android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@id/email_inputLayout"
             app:layout_constraintStart_toStartOf="@id/email_inputLayout"
             app:layout_constraintTop_toBottomOf="@id/email_inputLayout" />
