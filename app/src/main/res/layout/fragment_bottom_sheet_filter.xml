@@ -268,22 +268,25 @@
             app:trackColorInactive="@color/track_slide_inactive_color"
             app:trackHeight="2dp" />
 
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/close_filter_btn"
-            android:layout_width="140dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="50dp"
+            android:layout_width="125dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/custom_gradient_button"
+            android:drawableStart="@drawable/ic_clear_filter"
+            android:paddingStart="12dp"
+            android:paddingEnd="27dp"
             android:text="Filter"
             android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
             android:textSize="16sp"
-            app:icon="@drawable/ic_clear_filter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/slider_left_rectangle_txt" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
