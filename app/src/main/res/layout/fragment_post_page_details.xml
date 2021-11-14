@@ -84,8 +84,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:progressTint="#fcae1e"
                     android:progressBackgroundTint="#525252"
+                    android:progressTint="#fcae1e"
+                    android:rating="4.0"
                     app:layout_constraintStart_toStartOf="@id/post_page_title"
                     app:layout_constraintTop_toBottomOf="@id/post_page_title" />
 
@@ -94,11 +95,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:text="4.0/5.0"
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="@id/post_page_rating_bar"
                     app:layout_constraintStart_toEndOf="@id/post_page_rating_bar"
-                    app:layout_constraintTop_toTopOf="@id/post_page_rating_bar"
-                    tools:text="0.0/5.0" />
+                    app:layout_constraintTop_toTopOf="@id/post_page_rating_bar" />
 
                 <TextView
                     android:id="@+id/distance"
@@ -223,8 +224,8 @@
                     android:id="@+id/profile_img"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
                     android:elevation="10dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/profile_img_1"

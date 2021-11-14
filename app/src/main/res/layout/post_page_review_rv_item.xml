@@ -37,8 +37,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:progressTint="@color/black"
-            android:rating="3.5"
+            android:progressBackgroundTint="#525252"
+            android:progressTint="#fcae1e"
+            android:rating="4.0"
             android:stepSize="0.5"
             app:layout_constraintBottom_toBottomOf="@id/review_profile_img"
             app:layout_constraintStart_toStartOf="@id/reviews_fullname"
@@ -49,11 +50,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:text="4/5"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@id/review_rating_bar"
             app:layout_constraintStart_toEndOf="@id/review_rating_bar"
-            app:layout_constraintTop_toTopOf="@id/review_rating_bar"
-            tools:text="0/5" />
+            app:layout_constraintTop_toTopOf="@id/review_rating_bar" />
 
         <TextView
             android:id="@+id/added_review_text"
