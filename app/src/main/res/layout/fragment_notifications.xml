@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_marginTop="30dp"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
                 app:navigationIcon="@drawable/ic_arrow_back"
                 app:title="Notifications"
                 app:titleCentered="true" />
