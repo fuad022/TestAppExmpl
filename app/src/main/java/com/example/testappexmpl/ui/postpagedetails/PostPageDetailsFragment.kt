@@ -1,14 +1,15 @@
 package com.example.testappexmpl.ui.postpagedetails
 
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.navArgs
+import com.example.testappexmpl.R
 import com.example.testappexmpl.data.model.PostPageLightModel
 import com.example.testappexmpl.databinding.FragmentPostPageDetailsBinding
 import com.example.testappexmpl.ui.postpagedetails.adapter.PostPageGridRecyclerAdapter
@@ -18,7 +19,6 @@ import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageLightViewMo
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageGridRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageHorizontalRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageReviewRecyclerViewModel
-import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PostPageDetailsFragment : Fragment() {
@@ -51,8 +51,8 @@ class PostPageDetailsFragment : Fragment() {
     }
 
     private fun setTransparentStatusBar() {
-        requireActivity().window.decorView.setSystemUiVisibility(0)
-        requireActivity().window.statusBarColor = Color.TRANSPARENT
+        requireActivity().window.decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        requireActivity().window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
     }
 
     private fun initToolbar() {
@@ -81,22 +81,22 @@ class PostPageDetailsFragment : Fragment() {
     private fun observeHorizontalList() {
         horizontalViewModel.horizontalRecyclerDataList.observe(viewLifecycleOwner, {
             horizontalRecyclerAdapter.submitList(it.toMutableList())
-            binding.postPageHorizontalRv.adapter = horizontalRecyclerAdapter
         })
+        binding.postPageHorizontalRv.adapter = horizontalRecyclerAdapter
     }
 
     private fun observeGridList() {
         gridViewModel.gridRecyclerDataList.observe(viewLifecycleOwner, {
             gridRecyclerAdapter.submitList(it.toMutableList())
-            binding.postPageGridRv.adapter = gridRecyclerAdapter
         })
+        binding.postPageGridRv.adapter = gridRecyclerAdapter
     }
 
     private fun observeReviewList() {
         reviewViewModel.reviewRecyclerDataList.observe(viewLifecycleOwner, {
             reviewRecyclerAdapter.submitList(it.toMutableList())
-            binding.postPageReviewVerticalRv.adapter = reviewRecyclerAdapter
         })
+        binding.postPageReviewVerticalRv.adapter = reviewRecyclerAdapter
     }
 
     private fun observePostPageLight() {
@@ -105,7 +105,7 @@ class PostPageDetailsFragment : Fragment() {
             binding.postPagePretitle.text = it.pretitle
             binding.postPageTitle.text = it.title
             binding.plus.text = "+" + it.otherMembersCount + " people in members"
-            binding.cardPlus.text = "+" + it.otherPostPageGridImageCount  + " more"
+            binding.cardPlus.text = "+" + it.otherPostPageGridImageCount + " more"
         })
     }
 }

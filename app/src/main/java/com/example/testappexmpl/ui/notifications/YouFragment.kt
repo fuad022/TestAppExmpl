@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import com.example.testappexmpl.databinding.FragmentYouBinding
 import com.example.testappexmpl.ui.notifications.adapter.NotificationsAdapter
 import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsYouViewModel
@@ -13,7 +12,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class YouFragment : Fragment() {
     private val binding by lazy { FragmentYouBinding.inflate(layoutInflater) }
-//    private val viewModel: NotificationsYouViewModel by viewModels()
     private val viewModel: NotificationsYouViewModel by viewModel()
     private val notificationAdapter = NotificationsAdapter()
 
@@ -28,7 +26,7 @@ class YouFragment : Fragment() {
     private fun init() {
         viewModel.mockDataList.observe(viewLifecycleOwner, {
             notificationAdapter.submitList(it.toMutableList())
-            binding.followingNotifRv.adapter = notificationAdapter
         })
+        binding.followingNotifRv.adapter = notificationAdapter
     }
 }

@@ -18,7 +18,6 @@ class ProfileFragment : Fragment() {
     private val viewModel: ProfileRecyclerViewModel by viewModel()
     private val profileMainRecyclerAdapter = ProfileMainRecyclerAdapter()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,8 +30,8 @@ class ProfileFragment : Fragment() {
 
     private fun initToolbar() {
         setHasOptionsMenu(true)
-        (activity as AppCompatActivity).setSupportActionBar(binding.profileToolbar)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
+//        (activity as AppCompatActivity).setSupportActionBar(binding.profileToolbar)
+//        (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
 
         binding.profileToolbar.setNavigationOnClickListener {
             activity?.onBackPressed()
@@ -49,7 +48,7 @@ class ProfileFragment : Fragment() {
     private fun observeList() {
         viewModel.mockDataList.observe(viewLifecycleOwner, {
             profileMainRecyclerAdapter.submitList(it.toMutableList())
-            binding.profileRv.adapter = profileMainRecyclerAdapter
         })
+        binding.profileRv.adapter = profileMainRecyclerAdapter
     }
 }

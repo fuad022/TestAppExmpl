@@ -62,8 +62,6 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         }
     }
 
-
-
     private fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
@@ -74,7 +72,6 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 requireActivity(),
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_REQUEST_CODE
             )
-
             return
         }
         mMap.isMyLocationEnabled = false
@@ -95,9 +92,9 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 mMap.addCircle(
                     CircleOptions()
                         .center(currentLatLong)
-                        .strokeColor(Color.parseColor("#22f8edca"))
+                        .strokeColor(Color.parseColor("#22FFC726"))
                         .strokeWidth(1f)
-                        .fillColor(Color.parseColor("#22f8edca"))
+                        .fillColor(Color.parseColor("#22FFC726"))
                         .radius(10.0)
                 )
 
@@ -132,24 +129,4 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
     }
 
     override fun onMarkerClick(p0: Marker) = false
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
