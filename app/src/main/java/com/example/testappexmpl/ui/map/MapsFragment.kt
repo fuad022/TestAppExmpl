@@ -98,7 +98,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                         .radius(10.0)
                 )
 
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 20f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 21f))
             }
         }
     }
