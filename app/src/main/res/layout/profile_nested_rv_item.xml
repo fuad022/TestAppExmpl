@@ -24,6 +24,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/card_constraint_layout"
+                android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -48,16 +49,16 @@
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="@id/img_card"
                     app:layout_constraintStart_toEndOf="@id/img_card"
-                    tools:text="Between the lines" />
+                    tools:text="Joe's yoga" />
 
-                <TextView
-                    android:id="@+id/empty"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="   "
-                    app:layout_constraintBottom_toBottomOf="@id/card_name"
-                    app:layout_constraintStart_toEndOf="@id/card_name"
-                    app:layout_constraintTop_toTopOf="@id/card_name" />
+<!--                <TextView-->
+<!--                    android:id="@+id/empty"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="   "-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/card_name"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/card_name"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/card_name" />-->
 
                 <TextView
                     android:id="@+id/card_description"
