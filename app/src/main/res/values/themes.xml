@@ -16,7 +16,7 @@
     </style>
 
     <style name="Rectangle">
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">4%</item>
     </style>
 
     <style name="Rectangle_post_page">
