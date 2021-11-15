@@ -102,7 +102,7 @@ class PostPageDetailsFragment : Fragment() {
             binding.postPagePretitle.text = it.pretitle
             binding.postPageTitle.text = it.title
             binding.plus.text = "+" + it.otherMembersCount + " people in members"
-            binding.otherGridImageCount.text = it.otherPostPageGridImageCount.toString()
+            binding.cardPlus.text = "+" + it.otherPostPageGridImageCount  + " more"
         })
     }
 }
