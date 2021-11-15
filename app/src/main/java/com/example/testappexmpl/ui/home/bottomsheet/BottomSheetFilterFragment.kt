@@ -19,6 +19,7 @@ class BottomSheetFilterFragment : BottomSheetDialogFragment() {
         binding.closeFilterBtn.setOnClickListener {
             this.dismiss()
         }
+        binding.search.isEnabled = false
         return binding.root
     }
 

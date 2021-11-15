@@ -33,7 +33,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding.search.setupClearButtonWithAction()
+//        binding.search.setupClearButtonWithAction()
+        binding.search.isEnabled = false
         observeHorizontalList()
         observeVerticalList()
         initBtn()
