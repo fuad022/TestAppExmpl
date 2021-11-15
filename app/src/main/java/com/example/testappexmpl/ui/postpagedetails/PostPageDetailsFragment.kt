@@ -1,8 +1,8 @@
 package com.example.testappexmpl.ui.postpagedetails
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +18,7 @@ import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageLightViewMo
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageGridRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageHorizontalRecyclerViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageReviewRecyclerViewModel
+import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PostPageDetailsFragment : Fragment() {
@@ -41,16 +42,18 @@ class PostPageDetailsFragment : Fragment() {
         observeGridList()
         observeReviewList()
         observePostPageLight()
-//        initRatingBar()
         return binding.root
     }
 
-//    private fun initRatingBar() {
-//        binding.postPageRatingBar.setOnRatingBarChangeListener { ratingBar, fl, b ->
-//            Log.d("Rating", "rating")
-//            binding.ratingBarMark.setText("$fl/5.0")
-//        }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setTransparentStatusBar()
+    }
+
+    private fun setTransparentStatusBar() {
+        requireActivity().window.decorView.setSystemUiVisibility(0)
+        requireActivity().window.statusBarColor = Color.TRANSPARENT
+    }
 
     private fun initToolbar() {
         binding.postPageToolbar.setNavigationOnClickListener {

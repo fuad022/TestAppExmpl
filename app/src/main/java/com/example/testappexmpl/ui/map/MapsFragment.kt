@@ -24,6 +24,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentMapsBinding
+import com.example.testappexmpl.util.Util
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
@@ -52,12 +53,16 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
 
+        Util.setTransparentStatusBar(requireActivity())
+
         binding.toolbarMap.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
         }
     }
+
+
 
     private fun setUpMap() {
         if (ActivityCompat.checkSelfPermission(
@@ -90,9 +95,9 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                 mMap.addCircle(
                     CircleOptions()
                         .center(currentLatLong)
-                        .strokeColor(Color.parseColor("#f8edca"))
+                        .strokeColor(Color.parseColor("#22f8edca"))
                         .strokeWidth(1f)
-                        .fillColor(Color.parseColor("#f8edca"))
+                        .fillColor(Color.parseColor("#22f8edca"))
                         .radius(10.0)
                 )
 

@@ -18,6 +18,7 @@ import com.example.testappexmpl.ui.home.adapter.HomeVerticalRecyclerAdapter
 import com.example.testappexmpl.ui.home.bottomsheet.BottomSheetFilterFragment
 import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
 import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -36,6 +37,7 @@ class HomeFragment : Fragment() {
         observeHorizontalList()
         observeVerticalList()
         initBtn()
+        Util.exitFullScreen(requireActivity())
         return binding.root
     }
 

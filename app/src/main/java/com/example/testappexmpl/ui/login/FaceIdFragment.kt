@@ -23,7 +23,7 @@ class FaceIdFragment : Fragment() {
     private fun init() {
         binding.faceIdBtn.setOnClickListener {
             val action =
-                FaceIdFragmentDirections.actionFaceIdFragmentToRootFragment(R.drawable.profile_img_1)
+                FaceIdFragmentDirections.actionFaceIdFragmentToRootFragment()
             findNavController().navigate(action)
         }
 

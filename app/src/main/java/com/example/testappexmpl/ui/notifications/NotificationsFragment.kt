@@ -10,6 +10,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testappexmpl.databinding.FragmentNotificationsBinding
 import com.example.testappexmpl.ui.notifications.adapter.ViewPageAdapter
+import com.example.testappexmpl.util.Util
 import com.google.android.material.tabs.TabLayoutMediator
 
 class NotificationsFragment : Fragment() {
@@ -21,6 +22,7 @@ class NotificationsFragment : Fragment() {
     ): View {
         initToolbar()
         init()
+        Util.exitFullScreen(requireActivity())
         return binding.root
     }
 

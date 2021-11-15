@@ -6,16 +6,15 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentProfileBinding
 import com.example.testappexmpl.ui.profile.adapter.ProfileMainRecyclerAdapter
 import com.example.testappexmpl.ui.profile.viewmodel.ProfileRecyclerViewModel
+import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment : Fragment() {
     private val binding by lazy { FragmentProfileBinding.inflate(layoutInflater) }
-//    private val viewModel: ProfileRecyclerViewModel by viewModels()
     private val viewModel: ProfileRecyclerViewModel by viewModel()
     private val profileMainRecyclerAdapter = ProfileMainRecyclerAdapter()
 
@@ -26,6 +25,7 @@ class ProfileFragment : Fragment() {
     ): View {
         initToolbar()
         observeList()
+        Util.exitFullScreen(requireActivity())
         return binding.root
     }
 

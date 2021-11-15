@@ -36,6 +36,14 @@ class RootFragment : Fragment() {
         binding.bottomNav.setupWithNavController(navController)
         navView.itemIconTintList = null
 
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.postPageDetailsFragment -> hideBottomNav()
+                else ->
+                    showBottomNav()
+            }
+        }
+
         val userProfileUrl =
             "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
 
@@ -44,5 +52,13 @@ class RootFragment : Fragment() {
         binding.bottomNav.loadImage(
             userProfileUrl, R.id.profile, R.drawable.ic_launcher_foreground
         )
+    }
+
+    private fun hideBottomNav() {
+        binding.bottomNav.visibility = View.GONE
+    }
+
+    private fun showBottomNav() {
+        binding.bottomNav.visibility = View.VISIBLE
     }
 }

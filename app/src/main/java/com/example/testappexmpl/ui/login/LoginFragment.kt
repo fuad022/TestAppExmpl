@@ -51,7 +51,7 @@ class LoginFragment : Fragment() {
                 validatePass(pass, passInputLayout)
             ) {
                 val action =
-                    LoginFragmentDirections.actionLoginFragmentToRootFragment(R.drawable.profile_img_1)
+                    LoginFragmentDirections.actionLoginFragmentToRootFragment()
                 findNavController().navigate(action)
             }
         }
