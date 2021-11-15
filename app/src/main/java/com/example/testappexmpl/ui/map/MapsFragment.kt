@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
 import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -82,20 +83,20 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                         .icon(
                             bitmapDescriptorFromVector(
                                 requireActivity(),
-                                R.drawable.ic_map_pin
+                                R.drawable.ic_map_pin_new
                             )
                         )
                 )
                 mMap.addCircle(
                     CircleOptions()
                         .center(currentLatLong)
-                        .strokeColor(R.color.map_radar_color)
+                        .strokeColor(Color.parseColor("#f8edca"))
                         .strokeWidth(1f)
-                        .fillColor(R.color.map_radar_color)
+                        .fillColor(Color.parseColor("#f8edca"))
                         .radius(10.0)
                 )
 
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 22f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 20f))
             }
         }
     }
