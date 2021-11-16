@@ -256,7 +256,7 @@
             android:id="@+id/footer_constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:background="@color/white"
+            android:background="@drawable/shape_post_page_footer"
             app:layout_anchor="@id/nested_scroll_constraint_layout"
             app:layout_anchorGravity="bottom">
 
