@@ -42,6 +42,7 @@ class PostPageDetailsFragment : Fragment() {
         observeGridList()
         observeReviewList()
         observePostPageLight()
+        binding.search.isEnabled = false
         return binding.root
     }
 
