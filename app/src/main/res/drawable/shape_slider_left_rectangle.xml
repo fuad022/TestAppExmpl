@@ -8,5 +8,5 @@
         android:height="25dp" />
     <stroke
         android:width="2dp"
-        android:color="@color/track_slide_active_color" />
+        android:color="@color/orange_color" />
 </shape>

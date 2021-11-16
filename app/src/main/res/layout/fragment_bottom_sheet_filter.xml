@@ -50,7 +50,7 @@
                 android:elevation="2dp"
                 android:text="vegan"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -62,7 +62,7 @@
                 android:elevation="2dp"
                 android:text="running club"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -74,7 +74,7 @@
                 android:elevation="2dp"
                 android:text="health"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -87,7 +87,7 @@
                 android:elevation="2dp"
                 android:text="yoga"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -99,7 +99,7 @@
                 android:elevation="2dp"
                 android:text="fitness class"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -111,7 +111,7 @@
                 android:elevation="2dp"
                 android:text="boxing"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -124,7 +124,7 @@
                 android:elevation="2dp"
                 android:text="vegan"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -136,7 +136,7 @@
                 android:elevation="2dp"
                 android:text="running club"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -148,7 +148,7 @@
                 android:elevation="2dp"
                 android:text="health"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -161,7 +161,7 @@
                 android:elevation="2dp"
                 android:text="yoga"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -173,7 +173,7 @@
                 android:elevation="2dp"
                 android:text="fitness class"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
@@ -185,7 +185,7 @@
                 android:elevation="2dp"
                 android:text="boxing"
                 android:textColor="@color/chip_text_color"
-                app:chipStrokeColor="@color/chip_stroke_color"
+                app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
         </com.google.android.material.chip.ChipGroup>
 
@@ -261,10 +261,10 @@
             app:layout_constraintTop_toBottomOf="@id/distance_txt"
             app:thumbColor="@color/white"
             app:thumbRadius="21dp"
-            app:thumbStrokeColor="@color/thumb_slide_color"
+            app:thumbStrokeColor="@color/light_grey_color"
             app:thumbStrokeWidth="1dp"
-            app:trackColorActive="@color/track_slide_active_color"
-            app:trackColorInactive="@color/track_slide_inactive_color"
+            app:trackColorActive="@color/orange_color"
+            app:trackColorInactive="@color/light_grey_color"
             app:trackHeight="2dp" />
 
         <androidx.appcompat.widget.AppCompatButton

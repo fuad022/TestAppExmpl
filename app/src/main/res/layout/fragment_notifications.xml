@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-                app:tabIndicatorColor="@color/bottom_title"
+                app:tabIndicatorColor="@color/orange_color"
                 app:tabMode="fixed"
                 app:tabTextColor="@color/black" />
         </com.google.android.material.appbar.AppBarLayout>

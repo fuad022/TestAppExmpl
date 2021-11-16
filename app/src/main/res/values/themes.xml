@@ -39,7 +39,7 @@
 
     <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
         <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
-        <item name="backgroundTint">@color/bottom_title</item>
+        <item name="backgroundTint">@color/orange_color</item>
     </style>
 
     <style name="tooltipShOverylay">

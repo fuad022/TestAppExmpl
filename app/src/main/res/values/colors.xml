@@ -7,18 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="bottom_title">#FFC726</color>
     <color name="grey">#595959</color>
 
-    <color name="chip_stroke_color">#e1e1e1</color>
     <color name="chip_text_color">#9b9b9b</color>
-
-    <color name="thumb_slide_color">#e1e1e1</color>
-    <color name="track_slide_active_color">#FFC726</color>
-    <color name="track_slide_inactive_color">#e1e1e1</color>
-
     <color name="map_radar_color">#f8edca</color>
-
-    <color name="line_color">#e1e1e1</color>
+    <color name="orange_color">#FFC726</color>
+    <color name="light_grey_color">#e1e1e1</color>
 </resources>
