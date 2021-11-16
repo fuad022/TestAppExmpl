@@ -14,9 +14,9 @@
             android:id="@+id/post_page_appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:elevation="0dp"
             android:fitsSystemWindows="true"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+            app:elevation="0dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/post_page_collapsing_toolbar"
@@ -182,9 +182,9 @@
                             android:textColor="@color/white"
                             android:textSize="11sp"
                             app:layout_constraintBottom_toBottomOf="@id/camera"
-                            app:layout_constraintStart_toStartOf="@id/camera"
                             app:layout_constraintEnd_toEndOf="@id/camera"
-                            tools:text="+23 more"/>
+                            app:layout_constraintStart_toStartOf="@id/camera"
+                            tools:text="+23 more" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -266,11 +266,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="30dp"
-                android:text="£8.00 per person"
+                android:text="£8.00"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/per_person_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="per person"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/footer_text"
+                app:layout_constraintStart_toEndOf="@id/footer_text"
+                app:layout_constraintTop_toTopOf="@id/footer_text" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/footer_btn"
