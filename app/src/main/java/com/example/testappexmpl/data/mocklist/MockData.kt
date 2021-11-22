@@ -271,6 +271,12 @@ object MockData {
         return list
     }
 
+//    private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
+//        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
+//        list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
+//        return list
+//    }
+
     private fun getNestedItemList2(): List<ProfileNestedRecyclerItemModel> {
         val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
         list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_2, "Vegan health", "Analysis society global rubric think tank ideate.", "Vegan"))
