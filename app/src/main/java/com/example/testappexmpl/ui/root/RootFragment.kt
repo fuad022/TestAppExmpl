@@ -44,14 +44,14 @@ class RootFragment : Fragment() {
             }
         }
 
-        val userProfileUrl =
-            "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
-
-        binding.bottomNav.selectedItemId = R.id.home
-
-        binding.bottomNav.loadImage(
-            userProfileUrl, R.id.profile, R.drawable.ic_launcher_foreground
-        )
+//        val userProfileUrl =
+//            "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
+//
+//        binding.bottomNav.selectedItemId = R.id.home
+//
+//        binding.bottomNav.loadImage(
+//            userProfileUrl, R.id.profile, R.drawable.ic_launcher_foreground
+//        )
     }
 
     private fun hideBottomNav() {
