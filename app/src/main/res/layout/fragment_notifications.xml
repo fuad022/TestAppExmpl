@@ -23,19 +23,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_marginTop="30dp"
-                app:titleTextAppearance="@style/Toolbar.TitleText"
                 app:navigationIcon="@drawable/ic_arrow_back"
                 app:title="Notifications"
-                app:titleCentered="true" />
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/Toolbar.TitleText" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
                 app:tabIndicatorColor="@color/orange_color"
                 app:tabMode="fixed"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
                 app:tabTextColor="@color/black" />
         </com.google.android.material.appbar.AppBarLayout>
 
