@@ -20,7 +20,7 @@ class NotificationsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
+//        initToolbar()
         init()
         Util.exitFullScreen(requireActivity())
         return binding.root

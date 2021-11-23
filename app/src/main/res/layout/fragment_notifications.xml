@@ -22,8 +22,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_marginTop="30dp"
-                app:navigationIcon="@drawable/ic_arrow_back"
                 app:title="Notifications"
                 app:titleCentered="true"
                 app:titleTextAppearance="@style/Toolbar.TitleText" />
