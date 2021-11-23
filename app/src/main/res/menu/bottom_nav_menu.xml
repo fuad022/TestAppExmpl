@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
@@ -18,7 +19,7 @@
 
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_profile"
-        android:title="@string/title_profile" />
+        android:title="@string/title_profile"
+        app:actionLayout="@layout/bottom_nav_profile_image" />
 
 </menu>

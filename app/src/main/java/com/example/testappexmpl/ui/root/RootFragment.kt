@@ -12,6 +12,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentRootBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.core.view.MenuItemCompat
+
+
+
 
 class RootFragment : Fragment() {
     private val binding by lazy { FragmentRootBinding.inflate(layoutInflater) }
@@ -44,9 +48,15 @@ class RootFragment : Fragment() {
             }
         }
 
-//        val userProfileUrl =
-//            "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
-//
+        ////
+        val userProfileUrl =
+            "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
+
+        val menuItem = binding.bottomNav.menu.findItem(com.example.testappexmpl.R.id.profile)
+        val view = menuItem.actionView
+        val profileImage = view.findViewById(R.id.profile_image)
+        ////
+
 //        binding.bottomNav.selectedItemId = R.id.home
 //
 //        binding.bottomNav.loadImage(
