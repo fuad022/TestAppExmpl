@@ -22,22 +22,9 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
         observeList()
         Util.exitFullScreen(requireActivity())
         return binding.root
-    }
-
-    private fun initToolbar() {
-        setHasOptionsMenu(true)
-//        (activity as AppCompatActivity).setSupportActionBar(binding.profileToolbar)
-//        (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
-
-        binding.profileToolbar.setNavigationOnClickListener {
-            activity?.onBackPressed()
-            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
