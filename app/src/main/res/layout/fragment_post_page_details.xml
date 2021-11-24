@@ -40,7 +40,6 @@
                     android:id="@+id/post_page_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:layout_marginTop="30dp"
                     app:layout_collapseMode="pin"
                     app:navigationIcon="@drawable/ic_back_arrow_rounded" />
 
