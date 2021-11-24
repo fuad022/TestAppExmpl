@@ -5,7 +5,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
+        motion:duration="500">
 
         <OnSwipe
             motion:dragDirection="dragUp"
@@ -13,214 +13,139 @@
             motion:touchAnchorSide="top" />
 
         <KeyFrameSet>
+
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/profile_img" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/profile_img" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/profile_img" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/profile_img" />
 
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/profile_fullname" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/profile_fullname" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/profile_fullname" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/profile_fullname" />
 
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/profile_job" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/profile_job" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/profile_job" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/profile_job" />
 
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/talks_count" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/talks_count" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/talks_count" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/talks_count" />
 
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/talks_txt" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/talks_txt" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/talks_txt" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/talks_txt" />
 
             <KeyAttribute
                 android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/profile_percent" />
-            <KeyAttribute
                 android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/profile_percent" />
 
             <KeyAttribute
                 android:scaleX="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/profile_percent" />
-            <KeyAttribute
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/profile_percent" />
 
             <KeyAttribute
                 android:scaleX="0.2"
+                android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/profile_txt" />
 
             <KeyAttribute
-                android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/profile_txt" />
-
-            <KeyAttribute
-                android:scaleY="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/profile_txt" />
-
-            <KeyAttribute
+                android:scaleX="0"
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/profile_txt" />
 
             <KeyAttribute
                 android:scaleX="0.2"
+                android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/followers_count" />
 
             <KeyAttribute
-                android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/followers_count" />
-
-            <KeyAttribute
+                android:scaleX="0"
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/followers_count" />
 
             <KeyAttribute
-                android:scaleY="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/followers_count" />
-
-
-            <KeyAttribute
                 android:scaleX="0.2"
+                android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/followers_txt" />
 
             <KeyAttribute
-                android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/followers_txt" />
-
-            <KeyAttribute
-                android:scaleY="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/followers_txt" />
-
-            <KeyAttribute
+                android:scaleX="0"
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/followers_txt" />
 
             <KeyAttribute
                 android:scaleX="0.2"
+                android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/following_count" />
 
             <KeyAttribute
-                android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/following_count" />
-
-            <KeyAttribute
-                android:scaleY="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/following_count" />
-
-            <KeyAttribute
+                android:scaleX="0"
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/following_count" />
 
             <KeyAttribute
                 android:scaleX="0.2"
+                android:scaleY="0.2"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/following_txt" />
 
             <KeyAttribute
-                android:scaleX="0.2"
-                motion:framePosition="50"
-                motion:motionTarget="@+id/following_txt" />
-
-            <KeyAttribute
+                android:scaleX="0"
                 android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/following_txt" />
 
-            <KeyAttribute
-                android:scaleY="0"
-                motion:framePosition="100"
-                motion:motionTarget="@+id/following_txt" />
         </KeyFrameSet>
     </Transition>
 
@@ -418,5 +343,6 @@
             motion:layout_constraintEnd_toEndOf="@id/following_count"
             motion:layout_constraintStart_toStartOf="@id/following_count"
             motion:layout_constraintTop_toBottomOf="@id/following_count" />
+
     </ConstraintSet>
 </MotionScene>
