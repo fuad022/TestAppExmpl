@@ -1,6 +1,10 @@
 package com.example.testappexmpl.ui.root
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,8 +17,10 @@ import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentRootBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.core.view.MenuItemCompat
-
-
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
 
 
 class RootFragment : Fragment() {
@@ -40,6 +46,22 @@ class RootFragment : Fragment() {
         binding.bottomNav.setupWithNavController(navController)
         navView.itemIconTintList = null
 
+        val menu = binding.bottomNav.menu
+        val menuItem = menu.findItem(R.id.profile)
+        Glide.with(this)
+            .asBitmap()
+            .load(R.drawable.user_img_12)
+            .apply(
+                RequestOptions.circleCropTransform()
+            ).into(object :
+                CustomTarget<Bitmap>(dpToPx(24), dpToPx(24)) {
+                override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+                    menuItem?.icon = BitmapDrawable(resources, resource)
+                }
+
+                override fun onLoadCleared(placeholder: Drawable?) {}
+            })
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.postPageDetailsFragment -> hideBottomNav()
@@ -47,21 +69,6 @@ class RootFragment : Fragment() {
                     showBottomNav()
             }
         }
-
-        ////
-        val userProfileUrl =
-            "https://i.pinimg.com/originals/fd/1f/79/fd1f79bccedb91b28bebeaf2f84159f3.jpg"
-
-        val menuItem = binding.bottomNav.menu.findItem(com.example.testappexmpl.R.id.profile)
-        val view = menuItem.actionView
-        val profileImage = view.findViewById(R.id.profile_image)
-        ////
-
-//        binding.bottomNav.selectedItemId = R.id.home
-//
-//        binding.bottomNav.loadImage(
-//            userProfileUrl, R.id.profile, R.drawable.ic_launcher_foreground
-//        )
     }
 
     private fun hideBottomNav() {
@@ -70,5 +77,15 @@ class RootFragment : Fragment() {
 
     private fun showBottomNav() {
         binding.bottomNav.visibility = View.VISIBLE
+    }
+
+    fun dpToPx(dp: Int): Int {
+        val r = context!!.resources
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            dp.toFloat(),
+            r.displayMetrics
+        )
+            .toInt()
     }
 }

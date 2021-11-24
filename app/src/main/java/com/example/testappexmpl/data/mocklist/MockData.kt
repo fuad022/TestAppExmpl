@@ -264,18 +264,18 @@ object MockData {
         return list
     }
 
-//    private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
-//        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
-//        list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
-//        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_1, "Between the lines", "Scale and impact shared unit.", "Running club"))
-//        return list
-//    }
-
     private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
         val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
         list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
+        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_1, "Between the lines", "Scale and impact shared unit.", "Running club"))
         return list
     }
+
+//    private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
+//        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
+//        list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
+//        return list
+//    }
 
     private fun getNestedItemList2(): List<ProfileNestedRecyclerItemModel> {
         val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
