@@ -44,149 +44,123 @@
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip1"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="vegan"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip2"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="running club"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip3"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="health"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip4"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="yoga"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip5"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="fitness class"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip6"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="boxing"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip7"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="vegan"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip8"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="running club"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip9"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="health"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip10"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="yoga"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip11"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="fitness class"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chip12"
-                style="@style/Widget.MaterialComponents.Chip.Filter"
+                style="@style/CustomChipStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:elevation="2dp"
                 android:text="boxing"
-                android:textColor="@color/chip_text_color"
                 app:chipStrokeColor="@color/light_grey_color"
                 app:chipStrokeWidth="1dp" />
         </com.google.android.material.chip.ChipGroup>
@@ -229,7 +203,7 @@
             android:id="@+id/slider_left_rectangle"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginStart="59dp"
+            android:layout_marginStart="53dp"
             android:background="@drawable/shape_slider_left_rectangle"
             app:layout_constraintBottom_toBottomOf="@id/slider"
             app:layout_constraintStart_toStartOf="parent"
@@ -253,7 +227,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="57dp"
             android:layout_marginTop="40dp"
-            android:layout_marginEnd="70dp"
+            android:layout_marginEnd="75dp"
             android:valueFrom="0"
             android:valueTo="8"
             app:labelStyle="@style/tooltip"
@@ -262,7 +236,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/distance_txt"
             app:thumbColor="@color/white"
-            app:thumbRadius="21dp"
+            app:thumbRadius="13dp"
             app:thumbStrokeColor="@color/light_grey_color"
             app:thumbStrokeWidth="1dp"
             app:trackColorActive="@color/orange_color"

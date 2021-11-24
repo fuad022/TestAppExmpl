@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#595959</color>
 
-    <color name="chip_text_color">#9b9b9b</color>
+    <color name="medium_grey_color">#9b9b9b</color>
     <color name="map_radar_color">#f8edca</color>
     <color name="orange_color">#FFC726</color>
     <color name="light_grey_color">#e1e1e1</color>
