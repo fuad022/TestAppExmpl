@@ -9,5 +9,5 @@ data class PostPageLightModel(
     val pretitle: String?,
     val title: String?,
     val otherMembersCount: Int?,
-    val otherPostPageGridImageCount: Int?
+    val otherImageCount: Int?
 ) : Parcelable

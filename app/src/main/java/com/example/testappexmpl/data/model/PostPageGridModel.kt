@@ -4,6 +4,6 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class PostPageHorizontalRecyclerItemModel(
-    val memberImg: Int
+data class PostPageGridModel(
+    val image: Int
 ) : Parcelable

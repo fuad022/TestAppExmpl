@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.PostPageHorizontalRecyclerItemModel
+import com.example.testappexmpl.data.model.PostPageMembersModel
 import com.example.testappexmpl.databinding.PostPageHorizontalRvItemBinding
 
-class PostPageHorizontalRecyclerAdapter : ListAdapter<PostPageHorizontalRecyclerItemModel, PostPageHorizontalRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class PostPageMembersAdapter : ListAdapter<PostPageMembersModel, PostPageMembersAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: PostPageHorizontalRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: PostPageHorizontalRecyclerItemModel) {
+        fun bind(model: PostPageMembersModel) {
             binding.imgUserHorizontal.setImageResource(model.memberImg)
         }
     }
@@ -30,19 +30,19 @@ class PostPageHorizontalRecyclerAdapter : ListAdapter<PostPageHorizontalRecycler
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<PostPageHorizontalRecyclerItemModel>() {
+    private class DiffCallback : DiffUtil.ItemCallback<PostPageMembersModel>() {
         override fun areItemsTheSame(
-            oldItem: PostPageHorizontalRecyclerItemModel,
-            newItem: PostPageHorizontalRecyclerItemModel
+            oldItem: PostPageMembersModel,
+            newItem: PostPageMembersModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: PostPageHorizontalRecyclerItemModel,
-            newItem: PostPageHorizontalRecyclerItemModel
+            oldItem: PostPageMembersModel,
+            newItem: PostPageMembersModel
         ) = oldItem == newItem
     }
 
-    override fun submitList(list: List<PostPageHorizontalRecyclerItemModel>?) {
+    override fun submitList(list: List<PostPageMembersModel>?) {
         super.submitList(list?.map { it.copy() })
     }
 

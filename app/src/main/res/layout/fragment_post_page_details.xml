@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/post_page_coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".ui.postpagedetails.PostPageDetailsFragment">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/post_page_appbar"
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
@@ -19,7 +18,7 @@
             app:elevation="0dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/post_page_collapsing_toolbar"
+                android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:contentScrim="@color/white"
@@ -28,7 +27,7 @@
                 app:scrimAnimationDuration="300">
 
                 <ImageView
-                    android:id="@+id/post_page_collapsing_imageview"
+                    android:id="@+id/collapsing_image"
                     android:layout_width="match_parent"
                     android:layout_height="450dp"
                     android:scaleType="centerCrop"
@@ -37,7 +36,7 @@
                     tools:src="@drawable/vertical_img_1" />
 
                 <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/post_page_toolbar"
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
@@ -53,12 +52,12 @@
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/nested_scroll_constraint_layout"
+                android:id="@+id/nested_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/post_page_pretitle"
+                    android:id="@+id/pretitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -69,19 +68,19 @@
                     tools:text="Beach run club" />
 
                 <TextView
-                    android:id="@+id/post_page_title"
+                    android:id="@+id/title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
                     android:textColor="@color/black"
                     android:textSize="32sp"
-                    app:layout_constraintStart_toStartOf="@id/post_page_pretitle"
-                    app:layout_constraintTop_toBottomOf="@id/post_page_pretitle"
+                    app:layout_constraintStart_toStartOf="@id/pretitle"
+                    app:layout_constraintTop_toBottomOf="@id/pretitle"
                     app:layout_constraintWidth_percent="0.8"
                     tools:text="Run along with waves" />
 
                 <androidx.appcompat.widget.AppCompatRatingBar
-                    android:id="@+id/post_page_rating_bar"
+                    android:id="@+id/rating_bar"
                     style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -89,8 +88,8 @@
                     android:progressBackgroundTint="#525252"
                     android:progressTint="#fcae1e"
                     android:rating="4.0"
-                    app:layout_constraintStart_toStartOf="@id/post_page_title"
-                    app:layout_constraintTop_toBottomOf="@id/post_page_title" />
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title" />
 
                 <TextView
                     android:id="@+id/rating_bar_mark"
@@ -99,9 +98,9 @@
                     android:layout_marginStart="20dp"
                     android:text="4.0/5.0"
                     android:textSize="15sp"
-                    app:layout_constraintBottom_toBottomOf="@id/post_page_rating_bar"
-                    app:layout_constraintStart_toEndOf="@id/post_page_rating_bar"
-                    app:layout_constraintTop_toTopOf="@id/post_page_rating_bar" />
+                    app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+                    app:layout_constraintStart_toEndOf="@id/rating_bar"
+                    app:layout_constraintTop_toTopOf="@id/rating_bar" />
 
                 <TextView
                     android:id="@+id/distance"
@@ -115,37 +114,37 @@
                     app:layout_constraintTop_toTopOf="@id/rating_bar_mark" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/post_page_horizontal_rv"
+                    android:id="@+id/members_rv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintStart_toStartOf="@id/post_page_rating_bar"
-                    app:layout_constraintTop_toBottomOf="@id/post_page_rating_bar"
+                    app:layout_constraintStart_toStartOf="@id/rating_bar"
+                    app:layout_constraintTop_toBottomOf="@id/rating_bar"
                     tools:itemCount="5"
                     tools:listitem="@layout/post_page_horizontal_rv_item" />
 
                 <TextView
-                    android:id="@+id/plus"
+                    android:id="@+id/members_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/post_page_horizontal_rv"
-                    app:layout_constraintStart_toEndOf="@id/post_page_horizontal_rv"
-                    app:layout_constraintTop_toTopOf="@id/post_page_horizontal_rv"
+                    app:layout_constraintBottom_toBottomOf="@id/members_rv"
+                    app:layout_constraintStart_toEndOf="@id/members_rv"
+                    app:layout_constraintTop_toTopOf="@id/members_rv"
                     tools:text="+2 people in members" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/post_page_grid_rv"
+                    android:id="@+id/grid_rv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/post_page_horizontal_rv"
+                    app:layout_constraintTop_toBottomOf="@id/members_rv"
                     app:spanCount="2"
                     tools:itemCount="3"
                     tools:listitem="@layout/post_page_grid_rv_item" />
@@ -155,11 +154,10 @@
                     android:layout_width="177dp"
                     android:layout_height="145dp"
                     android:layout_margin="8dp"
-                    app:layout_constraintBottom_toBottomOf="@id/post_page_grid_rv"
-                    app:layout_constraintEnd_toEndOf="@id/post_page_grid_rv">
+                    app:layout_constraintBottom_toBottomOf="@id/grid_rv"
+                    app:layout_constraintEnd_toEndOf="@id/grid_rv">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/card_constraint_layout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/custom_gradient_card_view">
@@ -175,7 +173,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/card_plus"
+                            android:id="@+id/card_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
@@ -197,8 +195,8 @@
                     android:text="Reviews"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@id/post_page_grid_rv"
-                    app:layout_constraintTop_toBottomOf="@id/post_page_grid_rv" />
+                    app:layout_constraintStart_toStartOf="@id/grid_rv"
+                    app:layout_constraintTop_toBottomOf="@id/grid_rv" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/profile_img"
@@ -235,7 +233,7 @@
                     app:layout_constraintTop_toTopOf="@id/profile_img" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/post_page_review_vertical_rv"
+                    android:id="@+id/review_rv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="93dp"
@@ -252,11 +250,10 @@
         </androidx.core.widget.NestedScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/footer_constraint_layout"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="@drawable/shape_post_page_footer"
-            app:layout_anchor="@id/nested_scroll_constraint_layout"
+            app:layout_anchor="@id/nested_layout"
             app:layout_anchorGravity="bottom">
 
             <RelativeLayout
@@ -281,7 +278,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/per_person_text"
+                android:id="@+id/per_person_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"

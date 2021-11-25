@@ -8,9 +8,9 @@ data class PostPageModel(
     val image: Int?,
     val pretitle: String?,
     val title: String?,
-    val membersImageList: List<PostPageHorizontalRecyclerItemModel>?,
+    val membersImageList: List<PostPageMembersModel>?,
     val otherMembersCount: Int?,
-    val postPageGridImageList: List<PostPageGridRecyclerItemModel>?,
+    val postPageGridImageList: List<PostPageGridModel>?,
     val otherPostPageGridImageCount: Int?,
-    val reviewList: List<PostPageReviewItemModel>?
+    val reviewList: List<PostPageReviewModel>?
 ) : Parcelable

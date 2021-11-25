@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.PostPageGridRecyclerItemModel
+import com.example.testappexmpl.data.model.PostPageGridModel
 import com.example.testappexmpl.databinding.PostPageGridRvItemBinding
 
-class PostPageGridRecyclerAdapter : ListAdapter<PostPageGridRecyclerItemModel, PostPageGridRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class PostPageGridAdapter : ListAdapter<PostPageGridModel, PostPageGridAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: PostPageGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: PostPageGridRecyclerItemModel) {
+        fun bind(model: PostPageGridModel) {
             binding.imgGrid.setImageResource(model.image)
         }
     }
@@ -30,19 +30,19 @@ class PostPageGridRecyclerAdapter : ListAdapter<PostPageGridRecyclerItemModel, P
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<PostPageGridRecyclerItemModel>() {
+    private class DiffCallback : DiffUtil.ItemCallback<PostPageGridModel>() {
         override fun areItemsTheSame(
-            oldItem: PostPageGridRecyclerItemModel,
-            newItem: PostPageGridRecyclerItemModel
+            oldItem: PostPageGridModel,
+            newItem: PostPageGridModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: PostPageGridRecyclerItemModel,
-            newItem: PostPageGridRecyclerItemModel
+            oldItem: PostPageGridModel,
+            newItem: PostPageGridModel
         ) = oldItem == newItem
     }
 
-    override fun submitList(list: List<PostPageGridRecyclerItemModel>?) {
+    override fun submitList(list: List<PostPageGridModel>?) {
         super.submitList(list?.map { it.copy() })
     }
 

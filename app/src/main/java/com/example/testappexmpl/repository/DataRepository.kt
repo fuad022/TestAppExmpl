@@ -12,10 +12,10 @@ class DataRepository {
     fun getRepoNotifFollowigList(): List<NotificationsRecycleItemModel> = MockData.getNotifFollowigList()
     fun getRepoNotifYouList(): List<NotificationsRecycleItemModel> = MockData.getNotifYouList()
 
-    fun sendRepoGridData(list: List<PostPageGridRecyclerItemModel>): List<PostPageGridRecyclerItemModel> = list
-    fun sendRepoHorizontalData(list: List<PostPageHorizontalRecyclerItemModel>): List<PostPageHorizontalRecyclerItemModel> = list
+    fun sendRepoGridData(list: List<PostPageGridModel>): List<PostPageGridModel> = list
+    fun sendRepoHorizontalData(list: List<PostPageMembersModel>): List<PostPageMembersModel> = list
     fun sendRepoData(itemModel: PostPageLightModel): PostPageLightModel = itemModel
-    fun sendRepoReviewData(list: List<PostPageReviewItemModel>): List<PostPageReviewItemModel> = list
+    fun sendRepoReviewData(list: List<PostPageReviewModel>): List<PostPageReviewModel> = list
 
     fun getRepoProfileList(): List<ProfileMainRecyclerItemModel> = MockData.getProfileList()
 }

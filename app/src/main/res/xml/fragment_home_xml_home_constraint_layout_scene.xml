@@ -9,7 +9,7 @@
 
         <OnSwipe
             motion:dragDirection="dragUp"
-            motion:touchAnchorId="@+id/home_horizontal_rv"
+            motion:touchAnchorId="@+id/nested_scroll"
             motion:touchAnchorSide="top" />
 
         <KeyFrameSet>

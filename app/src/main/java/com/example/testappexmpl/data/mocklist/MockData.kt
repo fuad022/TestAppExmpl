@@ -30,25 +30,25 @@ object MockData {
     }
      */
 
-    private fun getMembersImageList(): List<PostPageHorizontalRecyclerItemModel> {
-        val list: ArrayList<PostPageHorizontalRecyclerItemModel> = arrayListOf()
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_1))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_2))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_3))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_4))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_5))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_6))
-        list.add(PostPageHorizontalRecyclerItemModel(R.drawable.user_img_7))
+    private fun getMembersImageList(): List<PostPageMembersModel> {
+        val list: ArrayList<PostPageMembersModel> = arrayListOf()
+        list.add(PostPageMembersModel(R.drawable.user_img_1))
+        list.add(PostPageMembersModel(R.drawable.user_img_2))
+        list.add(PostPageMembersModel(R.drawable.user_img_3))
+        list.add(PostPageMembersModel(R.drawable.user_img_4))
+        list.add(PostPageMembersModel(R.drawable.user_img_5))
+        list.add(PostPageMembersModel(R.drawable.user_img_6))
+        list.add(PostPageMembersModel(R.drawable.user_img_7))
         return list
     }
 
-    private fun getPostPageGridImageList(): List<PostPageGridRecyclerItemModel> {
-        val list: ArrayList<PostPageGridRecyclerItemModel> = arrayListOf()
-        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_1))
-        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_2))
-        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_3))
-        list.add(PostPageGridRecyclerItemModel(R.drawable.grid_img_4))
-        list.add(PostPageGridRecyclerItemModel(R.drawable.horizontal_img_1))
+    private fun getPostPageGridImageList(): List<PostPageGridModel> {
+        val list: ArrayList<PostPageGridModel> = arrayListOf()
+        list.add(PostPageGridModel(R.drawable.grid_img_1))
+        list.add(PostPageGridModel(R.drawable.grid_img_2))
+        list.add(PostPageGridModel(R.drawable.grid_img_3))
+        list.add(PostPageGridModel(R.drawable.grid_img_4))
+        list.add(PostPageGridModel(R.drawable.horizontal_img_1))
         return list
     }
 
@@ -159,91 +159,91 @@ object MockData {
         return list
     }
 
-    private fun getReviewList1(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList1(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Loved the class! Such beautiful land and collective impact infrastructure social entrepreneurship mass incarceration \uD83D\uDC4C",
             "Never run so well and it’s all thanks to Jordan. Silo framework overcome justice ideate, citizen-centered effective"
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Natascha Toros", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Emilia Campfire", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Natascha Toros", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Emilia Campfire", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList2(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList2(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Big up my running crew, they better not say running crew who! Commitment equal opportunity empower.",
             "So far, everything has going smooth & ease, but for one deal. I order a product from a China factory."
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Stefan Daily", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Noelle Cummings", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Stefan Daily", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Noelle Cummings", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList3(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList3(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Item was NOT as described and looks used. I request a refund or change product as described",
             "I send it TO CHINA, not locally as it was delivered. Cost more to send it than the value, so I kept item.  "
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Madeline Ball", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Ida Shortle", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Madeline Ball", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Ida Shortle", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList4(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList4(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Refund to sender should be as delivered, not at seller convinience. Site in Aliexpress didn´t allows me",
             "If I pay less and wait longer for product because it´s from China, no problem."
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Bruno Stanley", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Bob Rose", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Bruno Stanley", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Bob Rose", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList5(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList5(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "I buy from ali express for years now usually there is always small problems which ccan be solved",
             "Aliexpress platform could be nice but the fact is around 25% of my orders are problematic."
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Harlan Flowers", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Sybil Poe", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Harlan Flowers", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Sybil Poe", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList6(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList6(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Some of the sellers try to trick you into stealing your money pretending they have sent the item out.",
             "If you pay through PPal(which I recommend) they will freeze the orders straight away leaving you"
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Troy Badman", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Wade Hubbard", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Troy Badman", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Wade Hubbard", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList7(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList7(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "Chinese customer services will not match with western business practises.Leaving negative feedback is practical here",
             "We can learn from our mistakes to improve our services but not in \"there\" which can impact their business in their theory."
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Nina Carline", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Margot Holland", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Nina Carline", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Margot Holland", reviewCommentList[1]))
         return list
     }
 
-    private fun getReviewList8(): List<PostPageReviewItemModel> {
-        val list: ArrayList<PostPageReviewItemModel> = arrayListOf()
+    private fun getReviewList8(): List<PostPageReviewModel> {
+        val list: ArrayList<PostPageReviewModel> = arrayListOf()
         val reviewCommentList = listOf(
             "I ordered some items from them and paid extra to have them delivered within 7 to 15 days.",
             "It took 31 days to be delivered, even though I'm only in Vietnam. If a customer pays extra to have items delivered within a certain time"
         )
-        list.add(PostPageReviewItemModel(R.drawable.user_img_1, "Salena Andrews", reviewCommentList[0]))
-        list.add(PostPageReviewItemModel(R.drawable.user_img_2, "Pandora Elliott", reviewCommentList[1]))
+        list.add(PostPageReviewModel(R.drawable.user_img_1, "Salena Andrews", reviewCommentList[0]))
+        list.add(PostPageReviewModel(R.drawable.user_img_2, "Pandora Elliott", reviewCommentList[1]))
         return list
     }
 
