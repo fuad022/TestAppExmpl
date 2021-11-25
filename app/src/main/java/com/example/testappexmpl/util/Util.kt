@@ -1,6 +1,7 @@
 package com.example.testappexmpl.util
 
 import android.app.Activity
+import android.content.res.Resources
 import android.graphics.Color
 import android.os.Build
 import android.view.View
@@ -17,6 +18,10 @@ class Util {
             activity.window.decorView.systemUiVisibility =
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
             activity.window.statusBarColor = Color.TRANSPARENT
+        }
+
+        fun dpToPx(dp: Int): Int {
+            return (dp * Resources.getSystem().displayMetrics.density).toInt()
         }
     }
 }

@@ -8,7 +8,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/notif_item_img"
+            android:id="@+id/img"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
@@ -21,7 +21,7 @@
             tools:src="@drawable/user_img_8" />
 
         <TextView
-            android:id="@+id/notif_item_action_comment"
+            android:id="@+id/comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -31,7 +31,7 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/notif_item_img"
+            app:layout_constraintStart_toEndOf="@id/img"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.7"
             tools:text="@string/text_2" />

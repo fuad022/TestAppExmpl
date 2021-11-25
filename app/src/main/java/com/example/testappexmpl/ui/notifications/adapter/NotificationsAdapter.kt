@@ -12,8 +12,8 @@ class NotificationsAdapter : ListAdapter<NotificationsModel, NotificationsAdapte
 
     class ItemHolder(private val binding: NotificationsRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: NotificationsModel) {
-            binding.notifItemImg.setImageResource(model.image)
-            binding.notifItemActionComment.text = model.actionComment
+            binding.img.setImageResource(model.image)
+            binding.comment.text = model.actionComment
         }
     }
 

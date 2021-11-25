@@ -12,7 +12,7 @@ class PostPageMembersAdapter : ListAdapter<PostPageMembersModel, PostPageMembers
 
     class ItemHolder(private val binding: PostPageHorizontalRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: PostPageMembersModel) {
-            binding.imgUserHorizontal.setImageResource(model.memberImg)
+            binding.img.setImageResource(model.memberImg)
         }
     }
 

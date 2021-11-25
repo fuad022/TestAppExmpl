@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/post_page_review_rv_review"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/review_profile_img"
+            android:id="@+id/img"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
-            android:elevation="10dp"
+            android:elevation="5dp"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -21,18 +20,18 @@
             tools:src="@drawable/user_img_6" />
 
         <TextView
-            android:id="@+id/reviews_fullname"
+            android:id="@+id/fullname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@id/review_profile_img"
+            app:layout_constraintStart_toEndOf="@id/img"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Natasha Toros" />
 
         <androidx.appcompat.widget.AppCompatRatingBar
-            android:id="@+id/review_rating_bar"
+            android:id="@+id/rating_bar"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,9 +40,9 @@
             android:progressTint="#fcae1e"
             android:rating="4.0"
             android:stepSize="0.5"
-            app:layout_constraintBottom_toBottomOf="@id/review_profile_img"
-            app:layout_constraintStart_toStartOf="@id/reviews_fullname"
-            app:layout_constraintTop_toBottomOf="@id/reviews_fullname" />
+            app:layout_constraintBottom_toBottomOf="@id/img"
+            app:layout_constraintStart_toStartOf="@id/fullname"
+            app:layout_constraintTop_toBottomOf="@id/fullname" />
 
         <TextView
             android:id="@+id/rating_bar_mark"
@@ -52,64 +51,64 @@
             android:layout_marginStart="10dp"
             android:text="4/5"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_rating_bar"
-            app:layout_constraintStart_toEndOf="@id/review_rating_bar"
-            app:layout_constraintTop_toTopOf="@id/review_rating_bar" />
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+            app:layout_constraintStart_toEndOf="@id/rating_bar"
+            app:layout_constraintTop_toTopOf="@id/rating_bar" />
 
         <TextView
-            android:id="@+id/added_review_text"
+            android:id="@+id/text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:lineSpacingExtra="4dp"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@id/review_rating_bar"
-            app:layout_constraintTop_toBottomOf="@id/review_rating_bar"
+            app:layout_constraintStart_toStartOf="@id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@id/rating_bar"
             app:layout_constraintWidth_percent="0.7"
             tools:text="@string/text_1" />
 
         <ImageView
-            android:id="@+id/review_block_icon"
+            android:id="@+id/block_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/ic_review_block"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/added_review_text"
-            app:layout_constraintTop_toBottomOf="@id/added_review_text" />
+            app:layout_constraintStart_toStartOf="@id/text"
+            app:layout_constraintTop_toBottomOf="@id/text" />
 
         <TextView
-            android:id="@+id/review_block_count"
+            android:id="@+id/block_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="5"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_block_icon"
-            app:layout_constraintStart_toEndOf="@id/review_block_icon"
-            app:layout_constraintTop_toTopOf="@id/review_block_icon" />
+            app:layout_constraintBottom_toBottomOf="@id/block_icon"
+            app:layout_constraintStart_toEndOf="@id/block_icon"
+            app:layout_constraintTop_toTopOf="@id/block_icon" />
 
         <TextView
-            android:id="@+id/review_days_text"
+            android:id="@+id/days_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="days ago"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_block_icon"
-            app:layout_constraintEnd_toEndOf="@id/added_review_text"
-            app:layout_constraintTop_toTopOf="@id/review_block_icon" />
+            app:layout_constraintBottom_toBottomOf="@id/block_icon"
+            app:layout_constraintEnd_toEndOf="@id/text"
+            app:layout_constraintTop_toTopOf="@id/block_icon" />
 
         <TextView
-            android:id="@+id/review_days"
+            android:id="@+id/days"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="2"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/review_days_text"
-            app:layout_constraintEnd_toStartOf="@id/review_days_text"
-            app:layout_constraintTop_toTopOf="@id/review_days_text" />
+            app:layout_constraintBottom_toBottomOf="@id/days_text"
+            app:layout_constraintEnd_toStartOf="@id/days_text"
+            app:layout_constraintTop_toTopOf="@id/days_text" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

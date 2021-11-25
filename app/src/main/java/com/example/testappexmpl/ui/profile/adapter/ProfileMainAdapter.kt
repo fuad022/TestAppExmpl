@@ -3,16 +3,22 @@ package com.example.testappexmpl.ui.profile.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testappexmpl.data.model.ProfileMainRVModel
 import com.example.testappexmpl.databinding.ProfileRvItemBinding
+import com.example.testappexmpl.util.SpacingItemDecoration
+import com.example.testappexmpl.util.Util
 
 class ProfileMainAdapter : ListAdapter<ProfileMainRVModel, ProfileMainAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: ProfileRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: ProfileMainRVModel) {
             binding.title.text = model.title
+
+            val dividerItemDecoration = SpacingItemDecoration(Util.dpToPx(15), LinearLayoutManager.HORIZONTAL)
+            binding.nestedRv.addItemDecoration(dividerItemDecoration)
 
             val profileNestedRecyclerAdapter = ProfileNestedAdapter()
             binding.nestedRv.adapter = profileNestedRecyclerAdapter

@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/post_page_grid_rv_item_constraint_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/img_grid"
+            android:id="@+id/img"
             android:layout_width="177dp"
             android:layout_height="145dp"
             android:layout_margin="8dp"

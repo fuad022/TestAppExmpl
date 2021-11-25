@@ -12,9 +12,9 @@ class PostPageReviewAdapter : ListAdapter<PostPageReviewModel, PostPageReviewAda
 
     class ItemHolder(private val binding: PostPageReviewRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: PostPageReviewModel) {
-            binding.reviewProfileImg.setImageResource(model.reviewProfileImage)
-            binding.reviewsFullname.text = model.reviewFullName
-            binding.addedReviewText.text = model.reviewComment
+            binding.img.setImageResource(model.reviewProfileImage)
+            binding.fullname.text = model.reviewFullName
+            binding.text.text = model.reviewComment
         }
     }
 

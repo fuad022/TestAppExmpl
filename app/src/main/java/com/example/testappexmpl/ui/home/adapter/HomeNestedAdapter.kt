@@ -16,9 +16,9 @@ class HomeNestedAdapter : ListAdapter<PostPageModel, HomeNestedAdapter.ItemHolde
     inner class ItemHolder(private val binding: HomeNestedGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: PostPageModel?) {
             model?.let { m ->
-                binding.homeNestedGridRvItemImg.setImageResource(m.image!!)
-                binding.homeNestedGridRvItemPretitle.text = m.pretitle
-                binding.homeNestedGridRvItemTitle.text = m.title
+                binding.img.setImageResource(m.image!!)
+                binding.pretitle.text = m.pretitle
+                binding.title.text = m.title
                 binding.root.setOnClickListener {
                     m.let { user ->
                         setOnItemClick?.invoke(user)

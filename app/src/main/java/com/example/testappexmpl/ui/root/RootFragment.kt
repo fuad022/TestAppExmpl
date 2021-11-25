@@ -42,7 +42,7 @@ class RootFragment : Fragment() {
         val navView: BottomNavigationView = binding.bottomNav
 
         val navController =
-            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_root)
+            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
         binding.bottomNav.setupWithNavController(navController)
         navView.itemIconTintList = null
 

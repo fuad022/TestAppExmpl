@@ -12,7 +12,7 @@ class PostPageGridAdapter : ListAdapter<PostPageGridModel, PostPageGridAdapter.I
 
     class ItemHolder(private val binding: PostPageGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: PostPageGridModel) {
-            binding.imgGrid.setImageResource(model.image)
+            binding.img.setImageResource(model.image)
         }
     }
 
