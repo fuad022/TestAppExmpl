@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.testappexmpl.databinding.FragmentFollowingBinding
 import com.example.testappexmpl.ui.notifications.adapter.NotificationsAdapter
-import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsFollowingViewModel
+import com.example.testappexmpl.ui.notifications.viewmodel.FollowingViewModel
+//import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FollowingFragment : Fragment() {
     private val binding by lazy { FragmentFollowingBinding.inflate(layoutInflater) }
-    private val viewModel: NotificationsFollowingViewModel by viewModel()
+    private val viewModel: FollowingViewModel by viewModel()
+//    private val viewModel: NotificationsViewModel by viewModel()
     private val notificationAdapter = NotificationsAdapter()
 
     override fun onCreateView(
@@ -27,6 +29,6 @@ class FollowingFragment : Fragment() {
         viewModel.mockDataList.observe(viewLifecycleOwner, {
             notificationAdapter.submitList(it.toMutableList())
         })
-        binding.followingNotifRv.adapter = notificationAdapter
+        binding.followingRv.adapter = notificationAdapter
     }
 }

@@ -9,7 +9,7 @@
         tools:context=".ui.notifications.FollowingFragment">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/following_notif_rv"
+            android:id="@+id/following_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:overScrollMode="never"

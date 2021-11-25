@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.ProfileNestedRecyclerItemModel
+import com.example.testappexmpl.data.model.ProfileNestedRVModel
 import com.example.testappexmpl.databinding.ProfileNestedRvItemBinding
 
-class ProfileNestedRecyclerAdapter : ListAdapter<ProfileNestedRecyclerItemModel, ProfileNestedRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class ProfileNestedRecyclerAdapter : ListAdapter<ProfileNestedRVModel, ProfileNestedRecyclerAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: ProfileNestedRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: ProfileNestedRecyclerItemModel) {
+        fun bind(model: ProfileNestedRVModel) {
             binding.imgCard.setImageResource(model.image)
             binding.cardName.text = model.cardName
             binding.cardDescription.text = model.cardDescription
@@ -33,19 +33,19 @@ class ProfileNestedRecyclerAdapter : ListAdapter<ProfileNestedRecyclerItemModel,
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<ProfileNestedRecyclerItemModel>() {
+    private class DiffCallback : DiffUtil.ItemCallback<ProfileNestedRVModel>() {
         override fun areItemsTheSame(
-            oldItem: ProfileNestedRecyclerItemModel,
-            newItem: ProfileNestedRecyclerItemModel
+            oldItem: ProfileNestedRVModel,
+            newItem: ProfileNestedRVModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: ProfileNestedRecyclerItemModel,
-            newItem: ProfileNestedRecyclerItemModel
+            oldItem: ProfileNestedRVModel,
+            newItem: ProfileNestedRVModel
         ) = oldItem == newItem
     }
 
-    override fun submitList(list: List<ProfileNestedRecyclerItemModel>?) {
+    override fun submitList(list: List<ProfileNestedRVModel>?) {
         super.submitList(list?.map { it.copy() })
     }
 }

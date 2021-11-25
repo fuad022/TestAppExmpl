@@ -248,36 +248,49 @@ object MockData {
     }
 
     // Notifications
-    fun getNotifFollowigList(): List<NotificationsRecycleItemModel> {
-        val list: ArrayList<NotificationsRecycleItemModel> = arrayListOf()
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_3, "Olivia Sweyne was at Vegan essential in Shoreditch"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_6, "Miranda Hollister like The Natrual Vegan shop near you"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
+    /*fun getNotificationsList(): List<NotificationsModel> {
+        val list: ArrayList<NotificationsModel> = arrayListOf()
+        list.add(NotificationsModel(R.drawable.user_img_3, "Olivia Sweyne was at Vegan essential in Shoreditch", true))
+        list.add(NotificationsModel(R.drawable.user_img_6, "Miranda Hollister like The Natrual Vegan shop near you",true))
+        list.add(NotificationsModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently",true))
+        list.add(NotificationsModel(R.drawable.user_img_8, "Abigal Gates is going to Nike run club with 80 others",false))
+        list.add(NotificationsModel(R.drawable.user_img_9, "Natascha toros wants to invite you to go to thier yoga class",false))
+        list.add(NotificationsModel(R.drawable.user_img_10, "Olivia Sweyne was at Vegan essential in Shoreditch",false))
+        list.add(NotificationsModel(R.drawable.user_img_11, "Miranda Hollister like The Natrual Vegan shop near you",false))
+        list.add(NotificationsModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently",false))
+        return list
+    }*/
+
+    fun getNotifFollowigList(): List<NotificationsModel> {
+        val list: ArrayList<NotificationsModel> = arrayListOf()
+        list.add(NotificationsModel(R.drawable.user_img_3, "Olivia Sweyne was at Vegan essential in Shoreditch"))
+        list.add(NotificationsModel(R.drawable.user_img_6, "Miranda Hollister like The Natrual Vegan shop near you"))
+        list.add(NotificationsModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
         return list
     }
 
-    fun getNotifYouList(): List<NotificationsRecycleItemModel> {
-        val list: ArrayList<NotificationsRecycleItemModel> = arrayListOf()
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_8, "Abigal Gates is going to Nike run club with 80 others"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_9, "Natascha toros wants to invite you to go to thier yoga class"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_10, "Olivia Sweyne was at Vegan essential in Shoreditch"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_11, "Miranda Hollister like The Natrual Vegan shop near you"))
-        list.add(NotificationsRecycleItemModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
+    fun getNotifYouList(): List<NotificationsModel> {
+        val list: ArrayList<NotificationsModel> = arrayListOf()
+        list.add(NotificationsModel(R.drawable.user_img_8, "Abigal Gates is going to Nike run club with 80 others"))
+        list.add(NotificationsModel(R.drawable.user_img_9, "Natascha toros wants to invite you to go to thier yoga class"))
+        list.add(NotificationsModel(R.drawable.user_img_10, "Olivia Sweyne was at Vegan essential in Shoreditch"))
+        list.add(NotificationsModel(R.drawable.user_img_11, "Miranda Hollister like The Natrual Vegan shop near you"))
+        list.add(NotificationsModel(R.drawable.user_img_12, "Tim Hendrix liked a location you were at recently"))
         return list
     }
 
     //Profile
-    fun getProfileList(): List<ProfileMainRecyclerItemModel> {
-        val list: ArrayList<ProfileMainRecyclerItemModel> = arrayListOf()
-        list.add(ProfileMainRecyclerItemModel("Going to", getNestedItemList1()))
-        list.add(ProfileMainRecyclerItemModel("Recent experiences", getNestedItemList2()))
+    fun getProfileList(): List<ProfileMainRVModel> {
+        val list: ArrayList<ProfileMainRVModel> = arrayListOf()
+        list.add(ProfileMainRVModel("Going to", getNestedItemList1()))
+        list.add(ProfileMainRVModel("Recent experiences", getNestedItemList2()))
         return list
     }
 
-    private fun getNestedItemList1(): List<ProfileNestedRecyclerItemModel> {
-        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
-        list.add(ProfileNestedRecyclerItemModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
-        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_1, "Between the lines", "Scale and impact shared unit.", "Running club"))
+    private fun getNestedItemList1(): List<ProfileNestedRVModel> {
+        val list: ArrayList<ProfileNestedRVModel> = arrayListOf()
+        list.add(ProfileNestedRVModel(R.drawable.user_img_13, "Joe's yoga", "Agile catalyze but scalable innovate silo.", "Yoga"))
+        list.add(ProfileNestedRVModel(R.drawable.grid_img_1, "Between the lines", "Scale and impact shared unit.", "Running club"))
         return list
     }
 
@@ -287,10 +300,10 @@ object MockData {
 //        return list
 //    }
 
-    private fun getNestedItemList2(): List<ProfileNestedRecyclerItemModel> {
-        val list: ArrayList<ProfileNestedRecyclerItemModel> = arrayListOf()
-        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_2, "Vegan health", "Analysis society global rubric think tank ideate.", "Vegan"))
-        list.add(ProfileNestedRecyclerItemModel(R.drawable.grid_img_3, "Swordfish", "Overcome save the world changemaker.", "Swimming club"))
+    private fun getNestedItemList2(): List<ProfileNestedRVModel> {
+        val list: ArrayList<ProfileNestedRVModel> = arrayListOf()
+        list.add(ProfileNestedRVModel(R.drawable.grid_img_2, "Vegan health", "Analysis society global rubric think tank ideate.", "Vegan"))
+        list.add(ProfileNestedRVModel(R.drawable.grid_img_3, "Swordfish", "Overcome save the world changemaker.", "Swimming club"))
         return list
     }
 }

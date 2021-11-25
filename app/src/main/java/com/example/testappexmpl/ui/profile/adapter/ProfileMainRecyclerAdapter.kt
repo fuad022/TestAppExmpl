@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.testappexmpl.data.model.ProfileMainRecyclerItemModel
+import com.example.testappexmpl.data.model.ProfileMainRVModel
 import com.example.testappexmpl.databinding.ProfileRvItemBinding
 
-class ProfileMainRecyclerAdapter : ListAdapter<ProfileMainRecyclerItemModel, ProfileMainRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class ProfileMainRecyclerAdapter : ListAdapter<ProfileMainRVModel, ProfileMainRecyclerAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: ProfileRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: ProfileMainRecyclerItemModel) {
+        fun bind(model: ProfileMainRVModel) {
             binding.proileRvTitle.text = model.title
 
             val profileNestedRecyclerAdapter = ProfileNestedRecyclerAdapter()
@@ -34,19 +34,19 @@ class ProfileMainRecyclerAdapter : ListAdapter<ProfileMainRecyclerItemModel, Pro
         holder.bind(getItem(position))
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<ProfileMainRecyclerItemModel>() {
+    private class DiffCallback : DiffUtil.ItemCallback<ProfileMainRVModel>() {
         override fun areItemsTheSame(
-            oldItem: ProfileMainRecyclerItemModel,
-            newItem: ProfileMainRecyclerItemModel
+            oldItem: ProfileMainRVModel,
+            newItem: ProfileMainRVModel
         ) = oldItem == newItem
 
         override fun areContentsTheSame(
-            oldItem: ProfileMainRecyclerItemModel,
-            newItem: ProfileMainRecyclerItemModel
+            oldItem: ProfileMainRVModel,
+            newItem: ProfileMainRVModel
         ) = oldItem == newItem
     }
 
-    override fun submitList(list: List<ProfileMainRecyclerItemModel>?) {
+    override fun submitList(list: List<ProfileMainRVModel>?) {
         super.submitList(list?.map { it.copy() })
     }
 

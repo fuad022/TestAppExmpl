@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class NotificationsRecycleItemModel(
+data class NotificationsModel(
     val image: Int,
     val actionComment: String
 ) : Parcelable
