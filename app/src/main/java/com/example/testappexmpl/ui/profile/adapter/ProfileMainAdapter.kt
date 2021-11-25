@@ -8,14 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testappexmpl.data.model.ProfileMainRVModel
 import com.example.testappexmpl.databinding.ProfileRvItemBinding
 
-class ProfileMainRecyclerAdapter : ListAdapter<ProfileMainRVModel, ProfileMainRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class ProfileMainAdapter : ListAdapter<ProfileMainRVModel, ProfileMainAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: ProfileRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: ProfileMainRVModel) {
-            binding.proileRvTitle.text = model.title
+            binding.title.text = model.title
 
-            val profileNestedRecyclerAdapter = ProfileNestedRecyclerAdapter()
-            binding.profileNestedRv.adapter = profileNestedRecyclerAdapter
+            val profileNestedRecyclerAdapter = ProfileNestedAdapter()
+            binding.nestedRv.adapter = profileNestedRecyclerAdapter
             profileNestedRecyclerAdapter.submitList(model.list.toMutableList())
         }
     }

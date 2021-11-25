@@ -10,7 +10,7 @@ import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageGridViewMod
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageMembersViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageLightViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageReviewViewModel
-import com.example.testappexmpl.ui.profile.viewmodel.ProfileRecyclerViewModel
+import com.example.testappexmpl.ui.profile.viewmodel.ProfileViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -25,7 +25,7 @@ val appModule = module {
     viewModel { PostPageMembersViewModel(get()) }
     viewModel { PostPageLightViewModel(get()) }
     viewModel { PostPageReviewViewModel(get()) }
-    viewModel { ProfileRecyclerViewModel(get()) }
+    viewModel { ProfileViewModel(get()) }
     //
     viewModel { HomeViewModel(get()) }
     //

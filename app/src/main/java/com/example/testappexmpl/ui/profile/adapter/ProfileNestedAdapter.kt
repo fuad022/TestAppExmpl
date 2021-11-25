@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.testappexmpl.data.model.ProfileNestedRVModel
 import com.example.testappexmpl.databinding.ProfileNestedRvItemBinding
 
-class ProfileNestedRecyclerAdapter : ListAdapter<ProfileNestedRVModel, ProfileNestedRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class ProfileNestedAdapter : ListAdapter<ProfileNestedRVModel, ProfileNestedAdapter.ItemHolder>(DiffCallback()) {
 
     class ItemHolder(private val binding: ProfileNestedRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: ProfileNestedRVModel) {

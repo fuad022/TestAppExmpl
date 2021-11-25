@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.example.testappexmpl.data.model.ProfileMainRVModel
 import com.example.testappexmpl.repository.DataRepository
 
-class ProfileRecyclerViewModel(private val dataRepository: DataRepository) : ViewModel() {
+class ProfileViewModel(private val dataRepository: DataRepository) : ViewModel() {
     private val _mockDataList = MutableLiveData<List<ProfileMainRVModel>>()
     val mockDataList: LiveData<List<ProfileMainRVModel>> get() = _mockDataList
 
