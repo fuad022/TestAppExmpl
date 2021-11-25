@@ -1,8 +1,9 @@
 package com.example.testappexmpl.di
 
 import com.example.testappexmpl.repository.DataRepository
-import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
-import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+//import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
+//import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+import com.example.testappexmpl.ui.home.viewmodel.HomeViewModel
 import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsFollowingViewModel
 import com.example.testappexmpl.ui.notifications.viewmodel.NotificationsYouViewModel
 import com.example.testappexmpl.ui.postpagedetails.viewmodel.PostPageGridRecyclerViewModel
@@ -16,8 +17,8 @@ import org.koin.dsl.module
 val appModule = module {
     single { DataRepository() }
 
-    viewModel { HomeHorizontalRecyclerDataViewModel(get()) }
-    viewModel { HomeVerticalRecyclerDataViewModel(get()) }
+//    viewModel { HomeHorizontalRecyclerDataViewModel(get()) }
+//    viewModel { HomeVerticalRecyclerDataViewModel(get()) }
     viewModel { NotificationsFollowingViewModel(get()) }
     viewModel { NotificationsYouViewModel(get()) }
     viewModel { PostPageGridRecyclerViewModel(get()) }
@@ -25,4 +26,7 @@ val appModule = module {
     viewModel { PostPageLightViewModel(get()) }
     viewModel { PostPageReviewRecyclerViewModel(get()) }
     viewModel { ProfileRecyclerViewModel(get()) }
+    //
+    viewModel { HomeViewModel(get()) }
+    //
 }

@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/home_vertical_rv_item_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/home_main_rv_vertical_title"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
@@ -21,20 +20,20 @@
             tools:text="Fitness and run clubs" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_nested_grid_rv"
+            android:id="@+id/nested_rv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_main_rv_vertical_title"
+            app:layout_constraintTop_toBottomOf="@id/title"
             app:spanCount="2"
             tools:itemCount="4"
             tools:listitem="@layout/home_nested_grid_rv_item" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/home_main_rv_vertical_btn"
+            android:id="@+id/btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="22dp"
@@ -47,7 +46,7 @@
             android:textColor="#f69517"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_nested_grid_rv"
+            app:layout_constraintTop_toBottomOf="@id/nested_rv"
             tools:text="See all Fitness and run clubs"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

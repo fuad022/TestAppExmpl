@@ -10,7 +10,7 @@ import com.example.testappexmpl.data.model.PostPageModel
 import com.example.testappexmpl.databinding.HomeNestedGridRvItemBinding
 import com.example.testappexmpl.ui.home.HomeFragmentDirections
 
-class HomeNestedGridRecyclerAdapter : ListAdapter<PostPageModel, HomeNestedGridRecyclerAdapter.ItemHolder>(DiffCallback()) {
+class HomeNestedAdapter : ListAdapter<PostPageModel, HomeNestedAdapter.ItemHolder>(DiffCallback()) {
     var setOnItemClick: ((PostPageModel) -> Unit)? = null
 
     inner class ItemHolder(private val binding: HomeNestedGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {

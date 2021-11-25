@@ -5,6 +5,15 @@ import com.example.testappexmpl.data.model.*
 
 object MockData {
 
+    fun getHomeList(): List<HomeModel> {
+        val list: ArrayList<HomeModel> = arrayListOf()
+        list.add(HomeModel(R.drawable.horizontal_img_1, "People", "Fitness and run clubs", getHomeGridList1(), "See all Fitness and run clubs"))
+        list.add(HomeModel(R.drawable.horizontal_img_2, "Places to eat", "Healthy eating", getHomeGridList2(), "See all healthy eating "))
+        list.add(HomeModel(R.drawable.horizontal_img_3, "Yoga", null, null, null))
+        return list
+    }
+
+    /*
     fun getHomeHorizontalList(): List<HomeHorizontalRecyclerItemModel> {
         val list: ArrayList<HomeHorizontalRecyclerItemModel> = arrayListOf()
         list.add(HomeHorizontalRecyclerItemModel(R.drawable.horizontal_img_1, "People"))
@@ -19,6 +28,7 @@ object MockData {
         list.add(HomeVerticalRecyclerItemModel("Healthy eating", getHomeGridList2(), "See all healthy eating "))
         return list
     }
+     */
 
     private fun getMembersImageList(): List<PostPageHorizontalRecyclerItemModel> {
         val list: ArrayList<PostPageHorizontalRecyclerItemModel> = arrayListOf()

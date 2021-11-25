@@ -1,40 +1,36 @@
 package com.example.testappexmpl.ui.home
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import com.example.testappexmpl.R
-import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
+//import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
 import com.example.testappexmpl.databinding.FragmentHomeBinding
-import com.example.testappexmpl.ui.home.adapter.HomeHorizontalRecyclerAdapter
-import com.example.testappexmpl.ui.home.adapter.HomeVerticalRecyclerAdapter
+import com.example.testappexmpl.ui.home.adapter.HomeHorzAdapter
+import com.example.testappexmpl.ui.home.adapter.HomeVertAdapter
 import com.example.testappexmpl.ui.home.bottomsheet.BottomSheetFilterFragment
-import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
-import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+//import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
+//import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
+import com.example.testappexmpl.ui.home.viewmodel.HomeViewModel
 import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
-    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModel()
-    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModel()
-    private val homeHorizontalRecyclerAdapter = HomeHorizontalRecyclerAdapter()
-    private val homeVerticalRecyclerAdapter = HomeVerticalRecyclerAdapter()
-    private val homeHorizontalList = arrayListOf<HomeHorizontalRecyclerItemModel>()
+//    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModel()
+//    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModel()
+    private val homeViewModel: HomeViewModel by viewModel()
+    private val homeHorizontalRecyclerAdapter = HomeHorzAdapter()
+    private val homeVerticalRecyclerAdapter = HomeVertAdapter()
+//    private val homeHorizontalList = arrayListOf<HomeHorizontalRecyclerItemModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 //        binding.search.setupClearButtonWithAction()
-        binding.search.isEnabled = false
+//        binding.search.isEnabled = false
         observeHorizontalList()
         observeVerticalList()
         initBtn()
@@ -42,6 +38,7 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    /*
     @SuppressLint("ClickableViewAccessibility")
     fun EditText.setupClearButtonWithAction() {
         addTextChangedListener(object : TextWatcher {
@@ -73,20 +70,43 @@ class HomeFragment : Fragment() {
             homeHorizontalRecyclerAdapter.submitList(filteredHomeHorizontalList.toMutableList())
         }
     }
+    */
 
+    /*
     private fun observeHorizontalList() {
         horizontalViewModel.mockDataList.observe(viewLifecycleOwner, {
-            homeHorizontalList.addAll(it)
+//            homeHorizontalList.addAll(it)
             homeHorizontalRecyclerAdapter.submitList(it)
         })
         binding.homeHorizontalRv.adapter = homeHorizontalRecyclerAdapter
     }
+     */
 
+    private fun observeHorizontalList() {
+        homeViewModel.mockDataList.observe(viewLifecycleOwner, {
+            homeHorizontalRecyclerAdapter.submitList(it.filter {
+                it.image != null || it.horzTitle != null
+            })
+        })
+        binding.horizontalRv.adapter = homeHorizontalRecyclerAdapter
+    }
+
+    /*
     private fun observeVerticalList() {
         verticalViewModel.mockDataList.observe(viewLifecycleOwner, {
             homeVerticalRecyclerAdapter.submitList(it)
         })
         binding.homeVerticalRv.adapter = homeVerticalRecyclerAdapter
+    }
+     */
+
+    private fun observeVerticalList() {
+        homeViewModel.mockDataList.observe(viewLifecycleOwner, {
+            homeVerticalRecyclerAdapter.submitList(it.filter {
+                it.vertTitle != null || it.list != null || it.titleBtn != null
+            })
+        })
+        binding.verticalRv.adapter = homeVerticalRecyclerAdapter
     }
 
     private fun initBtn() {

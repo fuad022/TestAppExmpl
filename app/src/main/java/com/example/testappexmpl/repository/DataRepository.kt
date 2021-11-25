@@ -4,8 +4,10 @@ import com.example.testappexmpl.data.mocklist.MockData
 import com.example.testappexmpl.data.model.*
 
 class DataRepository {
-    fun getRepoHomeHorizontalList(): List<HomeHorizontalRecyclerItemModel> = MockData.getHomeHorizontalList()
-    fun getRepoHomeVerticalList(): List<HomeVerticalRecyclerItemModel> = MockData.getHomeVerticalList()
+
+    fun getRepoHomeList(): List<HomeModel> = MockData.getHomeList()
+    /*fun getRepoHomeHorizontalList(): List<HomeHorizontalRecyclerItemModel> = MockData.getHomeHorizontalList()
+    fun getRepoHomeVerticalList(): List<HomeVerticalRecyclerItemModel> = MockData.getHomeVerticalList()*/
 
     fun getRepoNotifFollowigList(): List<NotificationsRecycleItemModel> = MockData.getNotifFollowigList()
     fun getRepoNotifYouList(): List<NotificationsRecycleItemModel> = MockData.getNotifYouList()
