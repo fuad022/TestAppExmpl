@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.example.testappexmpl.databinding.FragmentNotificationsBinding
 import com.example.testappexmpl.ui.notifications.adapter.ViewPageAdapter
 import com.example.testappexmpl.util.Util
@@ -60,28 +59,3 @@ class NotificationsFragment : Fragment() {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
