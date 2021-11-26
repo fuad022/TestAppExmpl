@@ -7,7 +7,7 @@
         android:id="@+id/home_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/fragment_home_xml_home_constraint_layout_scene"
+        app:layoutDescription="@xml/home_layout_scene"
         tools:context=".ui.home.HomeFragment">
 
         <androidx.appcompat.widget.AppCompatEditText

@@ -6,7 +6,7 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/fragment_profile_xml_profile_coordinator_layout_scene"
+        app:layoutDescription="@xml/profile_layout_scene"
         tools:context=".ui.profile.ProfileFragment">
 
         <com.google.android.material.imageview.ShapeableImageView

@@ -85,7 +85,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
                         .icon(
                             bitmapDescriptorFromVector(
                                 requireActivity(),
-                                R.drawable.ic_map_pin_circle
+                                R.drawable.ic_map_pin_circle_new
                             )
                         )
                 )
