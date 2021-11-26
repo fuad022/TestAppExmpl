@@ -18,13 +18,13 @@ class PasswordFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
+//        initToolbar()
         init()
         return binding.root
     }
 
     private fun initToolbar() {
-        binding.toolbarPassword.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
@@ -32,7 +32,7 @@ class PasswordFragment : Fragment() {
     }
 
     private fun init() {
-        binding.continueToLoginBtn.setOnClickListener {
+        binding.continueBtn.setOnClickListener {
             putPass()
         }
     }

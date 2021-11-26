@@ -27,8 +27,8 @@ class FaceIdFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        binding.loginBtn.setOnClickListener {
-            val action = FaceIdFragmentDirections.actionFaceIdFragmentToLoginFragment()
+        binding.btn.setOnClickListener {
+            val action = FaceIdFragmentDirections.actionFaceIdFragmentToRootFragment()
             findNavController().navigate(action)
         }
     }

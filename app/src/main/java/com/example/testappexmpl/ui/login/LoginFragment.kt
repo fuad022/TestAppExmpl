@@ -19,13 +19,13 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
+//        initToolbar()
         init()
         return binding.root
     }
 
     private fun initToolbar() {
-        binding.toolbarLogin.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
@@ -51,7 +51,7 @@ class LoginFragment : Fragment() {
                 validatePass(pass, passInputLayout)
             ) {
                 val action =
-                    LoginFragmentDirections.actionLoginFragmentToRootFragment()
+                    LoginFragmentDirections.actionLoginFragmentToFaceIdFragment()
                 findNavController().navigate(action)
             }
         }

@@ -18,13 +18,13 @@ class EmailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
+//        initToolbar()
         init()
         return binding.root
     }
 
     private fun initToolbar() {
-        binding.toolbarEmail.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             activity?.onBackPressed()
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
@@ -32,7 +32,7 @@ class EmailFragment : Fragment() {
     }
 
     private fun init() {
-        binding.continueToPassBtn.setOnClickListener {
+        binding.continueBtn.setOnClickListener {
             putEmail()
         }
     }
