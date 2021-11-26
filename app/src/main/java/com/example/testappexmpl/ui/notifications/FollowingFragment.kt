@@ -14,7 +14,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class FollowingFragment : Fragment() {
     private val binding by lazy { FragmentFollowingBinding.inflate(layoutInflater) }
     private val viewModel: FollowingViewModel by viewModel()
-//    private val viewModel: NotificationsViewModel by viewModel()
     private val notificationAdapter = NotificationsAdapter()
 
     override fun onCreateView(

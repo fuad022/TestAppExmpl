@@ -13,23 +13,6 @@ object MockData {
         return list
     }
 
-    /*
-    fun getHomeHorizontalList(): List<HomeHorizontalRecyclerItemModel> {
-        val list: ArrayList<HomeHorizontalRecyclerItemModel> = arrayListOf()
-        list.add(HomeHorizontalRecyclerItemModel(R.drawable.horizontal_img_1, "People"))
-        list.add(HomeHorizontalRecyclerItemModel(R.drawable.horizontal_img_2, "Places to eat"))
-        list.add(HomeHorizontalRecyclerItemModel(R.drawable.horizontal_img_3, "Yoga"))
-        return list
-    }
-
-    fun getHomeVerticalList(): List<HomeVerticalRecyclerItemModel> {
-        val list: ArrayList<HomeVerticalRecyclerItemModel> = arrayListOf()
-        list.add(HomeVerticalRecyclerItemModel("Fitness and run clubs", getHomeGridList1(), "See all Fitness and run clubs"))
-        list.add(HomeVerticalRecyclerItemModel("Healthy eating", getHomeGridList2(), "See all healthy eating "))
-        return list
-    }
-     */
-
     private fun getMembersImageList(): List<PostPageMembersModel> {
         val list: ArrayList<PostPageMembersModel> = arrayListOf()
         list.add(PostPageMembersModel(R.drawable.user_img_1))

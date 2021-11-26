@@ -18,8 +18,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
     private val binding by lazy { FragmentHomeBinding.inflate(layoutInflater) }
-//    private val horizontalViewModel: HomeHorizontalRecyclerDataViewModel by viewModel()
-//    private val verticalViewModel: HomeVerticalRecyclerDataViewModel by viewModel()
     private val homeViewModel: HomeViewModel by viewModel()
     private val homeHorizontalRecyclerAdapter = HomeHorzAdapter()
     private val homeVerticalRecyclerAdapter = HomeVertAdapter()
@@ -72,16 +70,6 @@ class HomeFragment : Fragment() {
     }
     */
 
-    /*
-    private fun observeHorizontalList() {
-        horizontalViewModel.mockDataList.observe(viewLifecycleOwner, {
-//            homeHorizontalList.addAll(it)
-            homeHorizontalRecyclerAdapter.submitList(it)
-        })
-        binding.homeHorizontalRv.adapter = homeHorizontalRecyclerAdapter
-    }
-     */
-
     private fun observeHorizontalList() {
         homeViewModel.mockDataList.observe(viewLifecycleOwner, {
             homeHorizontalRecyclerAdapter.submitList(it.filter {
@@ -90,15 +78,6 @@ class HomeFragment : Fragment() {
         })
         binding.horizontalRv.adapter = homeHorizontalRecyclerAdapter
     }
-
-    /*
-    private fun observeVerticalList() {
-        verticalViewModel.mockDataList.observe(viewLifecycleOwner, {
-            homeVerticalRecyclerAdapter.submitList(it)
-        })
-        binding.homeVerticalRv.adapter = homeVerticalRecyclerAdapter
-    }
-     */
 
     private fun observeVerticalList() {
         homeViewModel.mockDataList.observe(viewLifecycleOwner, {

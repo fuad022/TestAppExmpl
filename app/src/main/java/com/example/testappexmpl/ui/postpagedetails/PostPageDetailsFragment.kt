@@ -36,7 +36,7 @@ class PostPageDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initToolbar()
+//        initToolbar()
         init()
         observeHorizontalList()
         observeGridList()
