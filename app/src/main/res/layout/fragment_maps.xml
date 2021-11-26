@@ -18,14 +18,12 @@
             android:id="@+id/toolbarMap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="?actionBarSize"
             app:contentInsetStart="0dp"
             app:contentInsetStartWithNavigation="0dp"
             app:layout_collapseMode="pin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_back_arrow_rounded"
             app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

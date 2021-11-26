@@ -5,13 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-//import com.example.testappexmpl.data.model.HomeHorizontalRecyclerItemModel
 import com.example.testappexmpl.databinding.FragmentHomeBinding
 import com.example.testappexmpl.ui.home.adapter.HomeHorzAdapter
 import com.example.testappexmpl.ui.home.adapter.HomeVertAdapter
 import com.example.testappexmpl.ui.home.bottomsheet.BottomSheetFilterFragment
-//import com.example.testappexmpl.ui.home.viewmodel.HomeHorizontalRecyclerDataViewModel
-//import com.example.testappexmpl.ui.home.viewmodel.HomeVerticalRecyclerDataViewModel
 import com.example.testappexmpl.ui.home.viewmodel.HomeViewModel
 import com.example.testappexmpl.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -21,7 +18,6 @@ class HomeFragment : Fragment() {
     private val homeViewModel: HomeViewModel by viewModel()
     private val homeHorizontalRecyclerAdapter = HomeHorzAdapter()
     private val homeVerticalRecyclerAdapter = HomeVertAdapter()
-//    private val homeHorizontalList = arrayListOf<HomeHorizontalRecyclerItemModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
