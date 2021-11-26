@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 app:contentScrim="@color/white"
                 app:expandedTitleGravity="bottom"
-                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
                 app:scrimAnimationDuration="300">
 
                 <ImageView
