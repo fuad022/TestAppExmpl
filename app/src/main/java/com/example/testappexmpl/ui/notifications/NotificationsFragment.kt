@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.testappexmpl.databinding.FragmentNotificationsBinding
 import com.example.testappexmpl.ui.notifications.adapter.ViewPageAdapter
 import com.example.testappexmpl.util.Util
@@ -41,6 +43,9 @@ class NotificationsFragment : Fragment() {
         binding.apply {
             val adapter = ViewPageAdapter(activity?.supportFragmentManager!!, lifecycle)
             viewPager.adapter = adapter
+
+            val child: View = viewPager.getChildAt(0)
+            (child as? RecyclerView)?.overScrollMode = View.OVER_SCROLL_NEVER
 
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 when (position) {
