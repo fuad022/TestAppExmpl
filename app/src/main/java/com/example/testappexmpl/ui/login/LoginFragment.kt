@@ -41,6 +41,11 @@ class LoginFragment : Fragment() {
             val action = LoginFragmentDirections.actionLoginFragmentToEmailFragment()
             findNavController().navigate(action)
         }
+
+        binding.mainLayout.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+        }
     }
 
     private fun authenticateUser() {

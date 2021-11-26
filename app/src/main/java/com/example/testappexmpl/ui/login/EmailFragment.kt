@@ -35,6 +35,11 @@ class EmailFragment : Fragment() {
         binding.continueBtn.setOnClickListener {
             putEmail()
         }
+
+        binding.mainLayout.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+        }
     }
 
     private fun putEmail() {

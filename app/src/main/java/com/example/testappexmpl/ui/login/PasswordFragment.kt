@@ -35,6 +35,11 @@ class PasswordFragment : Fragment() {
         binding.continueBtn.setOnClickListener {
             putPass()
         }
+
+        binding.mainLayout.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+        }
     }
 
     private fun putPass() {
