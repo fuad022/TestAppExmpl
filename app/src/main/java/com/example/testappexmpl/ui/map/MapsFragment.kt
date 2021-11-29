@@ -55,11 +55,11 @@ class MapsFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickList
 
         Util.setTransparentStatusBar(requireActivity())
 
-        binding.toolbarMap.setNavigationOnClickListener {
-            activity?.onBackPressed()
-            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
+//        binding.toolbarMap.setNavigationOnClickListener {
+//            activity?.onBackPressed()
+//            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+//        }
     }
 
     private fun setUpMap() {
