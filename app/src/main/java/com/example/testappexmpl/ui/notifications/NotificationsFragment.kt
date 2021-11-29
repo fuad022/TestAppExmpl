@@ -42,9 +42,7 @@ class NotificationsFragment : Fragment() {
         binding.apply {
             val adapter = ViewPageAdapter(activity?.supportFragmentManager!!, lifecycle)
             viewPager.adapter = adapter
-
-            val child: View = viewPager.getChildAt(0)
-            (child as? RecyclerView)?.overScrollMode = View.OVER_SCROLL_NEVER
+            viewPager.getChildAt(0)?.overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 when (position) {
