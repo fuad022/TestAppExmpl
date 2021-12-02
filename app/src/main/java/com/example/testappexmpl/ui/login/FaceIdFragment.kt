@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentFaceIdBinding
 
 class FaceIdFragment : Fragment() {

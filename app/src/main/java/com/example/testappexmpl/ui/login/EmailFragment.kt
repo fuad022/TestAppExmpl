@@ -18,38 +18,25 @@ class EmailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        initToolbar()
         init()
         return binding.root
     }
 
-    private fun initToolbar() {
-        binding.toolbar.setNavigationOnClickListener {
-            activity?.onBackPressed()
-            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
-    }
-
     private fun init() {
         binding.continueBtn.setOnClickListener {
-            putEmail()
+            binding.apply {
+                val email = emailEditText.text.toString()
+                if (validateEmail(email, emailInputLayout)
+                ) {
+                    val action = EmailFragmentDirections.actionEmailFragmentToPasswordFragment()
+                    findNavController().navigate(action)
+                }
+            }
         }
 
         binding.mainLayout.setOnTouchListener { view, motionEvent ->
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
-    }
-
-    private fun putEmail() {
-        binding.apply {
-            val email = emailEditText.text.toString()
-            if (validateEmail(email, emailInputLayout)
-            ) {
-                val action = EmailFragmentDirections.actionEmailFragmentToPasswordFragment()
-                findNavController().navigate(action)
-            }
         }
     }
 

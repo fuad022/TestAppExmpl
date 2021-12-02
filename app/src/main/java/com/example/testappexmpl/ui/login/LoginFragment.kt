@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.navigation.fragment.findNavController
-import com.example.testappexmpl.R
 import com.example.testappexmpl.databinding.FragmentLoginBinding
 import com.google.android.material.textfield.TextInputLayout
 
@@ -19,22 +18,23 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        initToolbar()
         init()
         return binding.root
     }
 
-    private fun initToolbar() {
-        binding.toolbar.setNavigationOnClickListener {
-            activity?.onBackPressed()
-            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
-    }
-
     private fun init() {
         binding.loginBtn.setOnClickListener {
-            authenticateUser()
+            binding.apply {
+                val email = emailEditText.text.toString()
+                val pass = passEditText.text.toString()
+                if (validateEmail(email, emailInputLayout) &&
+                    validatePass(pass, passInputLayout)
+                ) {
+                    val action =
+                        LoginFragmentDirections.actionLoginFragmentToFaceIdFragment()
+                    findNavController().navigate(action)
+                }
+            }
         }
 
         binding.forgotPassword.setOnClickListener {
@@ -45,20 +45,6 @@ class LoginFragment : Fragment() {
         binding.mainLayout.setOnTouchListener { view, motionEvent ->
             val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
-    }
-
-    private fun authenticateUser() {
-        binding.apply {
-            val email = emailEditText.text.toString()
-            val pass = passEditText.text.toString()
-            if (validateEmail(email, emailInputLayout) &&
-                validatePass(pass, passInputLayout)
-            ) {
-                val action =
-                    LoginFragmentDirections.actionLoginFragmentToFaceIdFragment()
-                findNavController().navigate(action)
-            }
         }
     }
 
