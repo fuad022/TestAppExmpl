@@ -152,6 +152,7 @@
                     android:layout_width="177dp"
                     android:layout_height="145dp"
                     android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp"
                     app:layout_constraintBottom_toBottomOf="@id/grid_rv"
                     app:layout_constraintEnd_toEndOf="@id/grid_rv">
 
