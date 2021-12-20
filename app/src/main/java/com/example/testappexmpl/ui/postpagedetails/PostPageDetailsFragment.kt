@@ -53,7 +53,8 @@ class PostPageDetailsFragment : Fragment() {
 
     private fun setTransparentStatusBar() {
         requireActivity().window.decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
-        requireActivity().window.statusBarColor = ContextCompat.getColor(requireActivity(), R.color.white)
+        requireActivity().window.statusBarColor =
+            ContextCompat.getColor(requireActivity(), R.color.white)
     }
 
     private fun initToolbar() {
@@ -78,10 +79,7 @@ class PostPageDetailsFragment : Fragment() {
         gridViewModel.sendGridData(args.postPageModel.postPageGridImageList!!)
         reviewViewModel.sendReviewData(args.postPageModel.reviewList!!)
 
-        binding.nestedLayout.setOnTouchListener { view, motionEvent ->
-            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view?.windowToken, 0)
-        }
+        hideKeyboard()
     }
 
     private fun observeHorizontalList() {
@@ -113,6 +111,13 @@ class PostPageDetailsFragment : Fragment() {
             binding.membersCount.text = "+" + it.otherMembersCount + " people in members"
             binding.cardCount.text = "+" + it.otherImageCount + " more"
         })
+    }
+
+    private fun hideKeyboard() {
+        binding.nestedLayout.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+        }
     }
 }
 
