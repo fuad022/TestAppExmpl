@@ -83,34 +83,34 @@ class PostPageDetailsFragment : Fragment() {
     }
 
     private fun observeHorizontalList() {
-        horizontalViewModel.horizontalRecyclerDataList.observe(viewLifecycleOwner, {
+        horizontalViewModel.horizontalRecyclerDataList.observe(viewLifecycleOwner) {
             horizontalRecyclerAdapter.submitList(it.toMutableList())
-        })
+        }
         binding.membersRv.adapter = horizontalRecyclerAdapter
     }
 
     private fun observeGridList() {
-        gridViewModel.gridRecyclerDataList.observe(viewLifecycleOwner, {
+        gridViewModel.gridRecyclerDataList.observe(viewLifecycleOwner) {
             gridRecyclerAdapter.submitList(it.toMutableList())
-        })
+        }
         binding.gridRv.adapter = gridRecyclerAdapter
     }
 
     private fun observeReviewList() {
-        reviewViewModel.reviewRecyclerDataList.observe(viewLifecycleOwner, {
+        reviewViewModel.reviewRecyclerDataList.observe(viewLifecycleOwner) {
             reviewRecyclerAdapter.submitList(it.toMutableList())
-        })
+        }
         binding.reviewRv.adapter = reviewRecyclerAdapter
     }
 
     private fun observePostPageLight() {
-        postPageLightViewModel.postPageLightData.observe(viewLifecycleOwner, {
+        postPageLightViewModel.postPageLightData.observe(viewLifecycleOwner) {
             binding.collapsingImage.setImageResource(it.image!!)
             binding.pretitle.text = it.pretitle
             binding.title.text = it.title
             binding.membersCount.text = "+" + it.otherMembersCount + " people in members"
             binding.cardCount.text = "+" + it.otherImageCount + " more"
-        })
+        }
     }
 
     private fun hideKeyboard() {
