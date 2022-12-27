@@ -23,8 +23,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        binding.search.setupClearButtonWithAction()
-//        binding.search.isEnabled = false
         observeHorizontalList()
         observeVerticalList()
         initBtn()
@@ -32,55 +30,21 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    /*
-    @SuppressLint("ClickableViewAccessibility")
-    fun EditText.setupClearButtonWithAction() {
-        addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(ed: Editable?) {
-                filter(ed.toString())
-                val clearIcon = if (ed?.isNotEmpty() == true) R.drawable.ic_clear else 0
-                setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search_new, 0, clearIcon, 0)
-            }
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) = Unit
-        })
-
-        setOnTouchListener(View.OnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_UP) {
-                if (event.rawX >= (this.right - this.compoundPaddingRight)) {
-                    this.setText("")
-                    return@OnTouchListener true
-                }
-            }
-            return@OnTouchListener false
-        })
-    }
-
-    private fun filter(text: String) {
-        val filteredHomeHorizontalList = arrayListOf<HomeHorizontalRecyclerItemModel>()
-        homeHorizontalList.forEach {
-            if (text.lowercase() in it.title.lowercase())
-                filteredHomeHorizontalList.add(it)
-            homeHorizontalRecyclerAdapter.submitList(filteredHomeHorizontalList.toMutableList())
-        }
-    }
-    */
-
     private fun observeHorizontalList() {
-        homeViewModel.mockDataList.observe(viewLifecycleOwner, {
+        homeViewModel.mockDataList.observe(viewLifecycleOwner) {
             homeHorizontalRecyclerAdapter.submitList(it.filter {
                 it.image != null || it.horzTitle != null
             })
-        })
+        }
         binding.horizontalRv.adapter = homeHorizontalRecyclerAdapter
     }
 
     private fun observeVerticalList() {
-        homeViewModel.mockDataList.observe(viewLifecycleOwner, {
+        homeViewModel.mockDataList.observe(viewLifecycleOwner) {
             homeVerticalRecyclerAdapter.submitList(it.filter {
                 it.vertTitle != null || it.list != null || it.titleBtn != null
             })
-        })
+        }
         binding.verticalRv.adapter = homeVerticalRecyclerAdapter
     }
 
